@@ -1,131 +1,74 @@
-document.addEventListener('DOMContentLoaded', () => {
+/* ==========================================================================
+   PAGE D'ACCUEIL
+   Construit les cartes « Études de cas », « Autres créations » et les liens
+   de contact à partir de data.js. Se relance à chaque changement de langue.
+   ========================================================================== */
 
-    // ====================================================================
-    // 0. BASE DE DONNÉES (projectsData vient désormais de data.js)
-    // ====================================================================
+function coverHTML(item, extraClass = "") {
+  if (item.cover) {
+    return `<img class="cover ${extraClass}" src="${item.cover}" alt="${fmt(plain(tr(item.title)))}" loading="lazy">`;
+  }
+  // Emplacement en attendant une vraie capture
+  const initial = plain(tr(item.title)).replace(/^L’/, "").charAt(0);
+  return `<div class="cover cover--placeholder ${extraClass}" aria-hidden="true">
+            <span class="cover__initial">${fmt(initial)}</span>
+            <span class="cover__note">${t("cover_placeholder")}</span>
+          </div>`;
+}
 
-    const projectsContainer = document.getElementById('projects-container');
-    
-    // Fonction pour rendre les projets
-    const renderProjects = (filter = 'all') => {
-        projectsContainer.innerHTML = '';
-        let count = 0;
-        
-        projectsData.forEach(project => {
-            if(filter === 'all' || project.category === filter) {
-                count++;
-                const article = document.createElement('article');
-                article.className = 'project-chapter';
-                article.setAttribute('data-project', project.id);
-                article.setAttribute('data-category', project.category);
-                
-                article.innerHTML = `
-                    <div class="project-thumb-container">
-                        <img src="${project.thumbnail}" alt="${project.title}" class="project-thumb">
-                    </div>
-                    <div class="project-info">
-                        <span class="chapter-number">${project.categoryLabel}</span>
-                        <h2 class="project-title">${project.title}</h2>
-                        <p class="project-summary">${project.summary}</p>
-                        <button class="read-story-btn">Découvrir</button>
-                    </div>
-                `;
-                projectsContainer.appendChild(article);
-                
-                // Trigger reflow pour l'animation
-                setTimeout(() => article.classList.add('visible'), 50 * count);
-            }
-        });
-        
-        attachProjectListeners();
-    };
+function renderCaseStudies() {
+  const list = document.getElementById("cases-list");
+  if (!list) return;
+  list.innerHTML = CASE_STUDIES.map((c, i) => `
+    <li class="case-card reveal">
+      <a class="case-card__link" href="projet-detail.html?id=${c.id}">
+        ${coverHTML(c, "case-card__cover")}
+        <div class="case-card__body">
+          <span class="case-card__num">${String(i + 1).padStart(2, "0")}</span>
+          <h3 class="case-card__title">${fmt(tr(c.title))}</h3>
+          <p class="case-card__tagline">${fmt(tr(c.tagline))}</p>
+          <p class="case-card__meta">
+            <span>${fmt(tr(c.kind))}</span>
+            <span class="badge">${fmt(tr(c.status))}</span>
+          </p>
+          <span class="case-card__cta">${t("case_read")} <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+    </li>`).join("");
+}
 
-    // Premier rendu
-    renderProjects();
+function renderOtherWorks() {
+  const list = document.getElementById("other-list");
+  if (!list) return;
+  list.innerHTML = OTHER_WORKS.map(w => `
+    <li class="work-card reveal">
+      <p class="work-card__cat">${fmt(tr(w.category))} · ${fmt(tr(w.year))}</p>
+      <h3 class="work-card__title">${fmt(tr(w.title))}</h3>
+      <p class="work-card__text">${fmt(tr(w.text))}</p>
+      ${w.link && w.link.url
+        ? `<a class="text-link" href="${w.link.url}" target="_blank" rel="noopener">${fmt(tr(w.link.label))} <span aria-hidden="true">↗</span></a>`
+        : ""}
+    </li>`).join("");
+}
 
-    // ====================================================================
-    // 1. GESTION DES CONTRÔLES (Thèmes & Dispositions)
-    // ====================================================================
-    
-    // Pour changer de thème manuellement ("Cinématique", "Système", "Velvet", "Grimoire")
-    // modifiez 'modern' par 'system', 'velvet', ou 'grimoire' ci-dessous
-    document.documentElement.setAttribute('data-theme', 'modern');
+function renderContact() {
+  const mail = document.getElementById("contact-email");
+  if (mail) {
+    mail.href = `mailto:${SITE.email}`;
+    mail.textContent = SITE.email;
+  }
+  const links = document.getElementById("contact-links");
+  if (links) {
+    links.innerHTML = SITE.links
+      .filter(l => l.url)
+      .map(l => `<li><a href="${l.url}" target="_blank" rel="noopener">${fmt(l.label)} <span aria-hidden="true">↗</span></a></li>`)
+      .join("");
+  }
+}
 
-    const filterButtons = document.querySelectorAll('[data-filter]');
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const filter = btn.getAttribute('data-filter');
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            renderProjects(filter);
-        });
-    });
-
-    // ====================================================================
-    // 3. OVERLAY DYNAMIQUE
-    // ====================================================================
-    const overlay = document.getElementById('project-overlay');
-    const closeBtn = document.getElementById('close-overlay');
-    const detailCategory = document.getElementById('detail-category');
-    const detailTitle = document.getElementById('detail-title');
-    const detailAmorce = document.getElementById('detail-amorce');
-    const mediaContainer = document.getElementById('media-container');
-    const detailLink = document.getElementById('detail-link');
-
-    function attachProjectListeners() {
-        const chapters = document.querySelectorAll('.project-chapter');
-        chapters.forEach(chapter => {
-            chapter.addEventListener('click', () => {
-                const projectId = chapter.getAttribute('data-project');
-                const project = projectsData.find(p => p.id === projectId);
-                
-                if(project) {
-                    detailCategory.textContent = project.categoryLabel;
-                    detailTitle.textContent = project.title;
-                    detailAmorce.textContent = project.amorce;
-                    
-                    // Générer le média
-                    mediaContainer.innerHTML = '';
-                    if(project.mediaType === 'image') {
-                        mediaContainer.innerHTML = `<img src="${project.mediaUrl}" alt="Aperçu ${project.title}" class="media-image">`;
-                    } else if(project.mediaType === 'video') {
-                        mediaContainer.innerHTML = `<div class="video-wrapper"><iframe src="${project.mediaUrl}" class="media-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
-                    } else if(project.mediaType === 'iframe') {
-                        mediaContainer.innerHTML = `<div class="iframe-wrapper"><iframe src="${project.mediaUrl}" class="media-3d-web" frameborder="0" allow="autoplay; fullscreen; vr" allowfullscreen></iframe></div>`;
-                    } else if(project.mediaType === 'script') {
-                        mediaContainer.innerHTML = project.mediaContent;
-                    }
-                    
-                    detailLink.href = `projet-detail.html?id=${project.id}`;
-                    
-                    overlay.classList.remove('hidden');
-                    document.body.style.overflow = 'hidden'; 
-                    overlay.scrollTo(0, 0);
-                }
-            });
-        });
-    }
-
-    closeBtn.addEventListener('click', () => {
-        overlay.classList.add('hidden');
-        setTimeout(() => {
-            document.body.style.overflow = 'auto'; 
-            mediaContainer.innerHTML = ''; // Nettoyer pour stopper les vidéos en arrière-plan
-        }, 500);
-    });
-
-    // ====================================================================
-    // 4. RÉVÉLATION AU DÉFILEMENT (Base)
-    // ====================================================================
-    const observerOptions = { threshold: 0.15 };
-    const scrollObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.fade-in-scroll:not(.project-chapter)').forEach(el => scrollObserver.observe(el));
+onRender(() => {
+  renderCaseStudies();
+  renderOtherWorks();
+  renderContact();
+  revealOnScroll();
 });

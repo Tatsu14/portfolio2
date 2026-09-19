@@ -1,81 +1,116 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Récupération de l'ID depuis l'URL (ex: ?id=1)
-    const urlParams = new URLSearchParams(window.location.search);
-    const projectId = urlParams.get('id');
+/* ==========================================================================
+   PAGE D'ÉTUDE DE CAS
+   Lit l'identifiant dans l'adresse (projet-detail.html?id=proserpine) et
+   construit la page à partir de data.js.
+   ========================================================================== */
 
-    // 2. Chercher le projet dans data.js (projectsData)
-    const projectIndex = projectsData.findIndex(p => p.id === projectId);
-    const project = projectIndex !== -1 ? projectsData[projectIndex] : null;
+const params = new URLSearchParams(window.location.search);
+const caseId = params.get("id");
+const caseIndex = CASE_STUDIES.findIndex(c => c.id === caseId);
+const study = caseIndex !== -1 ? CASE_STUDIES[caseIndex] : null;
 
-    if (!project) {
-        // Fallback propre si l'utilisateur charge un ID inexistant
-        document.getElementById('detail-title').textContent = "Projet introuvable";
-        document.getElementById('detail-summary').textContent = "Ce projet a été supprimé ou l'URL est incorrecte.";
-        return;
-    }
+function sectionHTML(section, index) {
+  let body = "";
 
-    // 3. Application du contenu au DOM
-    
-    // --> Héro Bannière
-    document.title = `${project.title} - Étude de Cas`;
-    document.getElementById('detail-hero-bg').style.backgroundImage = `url('${project.heroImage || project.thumbnail}')`;
-    document.getElementById('detail-title').textContent = project.title;
-    document.getElementById('detail-summary').textContent = project.summary;
+  if (section.paragraphs) {
+    body += section.paragraphs.map(p => `<p>${fmt(tr(p))}</p>`).join("");
+  }
+  if (section.callout) {
+    body += `<blockquote class="callout">${fmt(tr(section.callout))}</blockquote>`;
+  }
+  if (section.list) {
+    body += `<ul class="check-list">${section.list.map(li => `<li>${fmt(tr(li))}</li>`).join("")}</ul>`;
+  }
+  if (section.items) {
+    body += `<ul class="decision-list">${section.items.map(it => `
+      <li>
+        <h3>${fmt(tr(it.title))}</h3>
+        <p>${fmt(tr(it.text))}</p>
+      </li>`).join("")}</ul>`;
+  }
+  if (section.ai) {
+    body += `<div class="ai-split">
+      <div class="ai-split__col">
+        <h3>${t("ai_did")}</h3>
+        <ul>${section.ai.did.map(li => `<li>${fmt(tr(li))}</li>`).join("")}</ul>
+      </div>
+      <div class="ai-split__col ai-split__col--me">
+        <h3>${t("ai_decided")}</h3>
+        <ul>${section.ai.decided.map(li => `<li>${fmt(tr(li))}</li>`).join("")}</ul>
+      </div>
+    </div>`;
+  }
 
-    // --> Grille de Métadonnées
-    document.getElementById('meta-category').textContent = project.categoryLabel || "---";
-    document.getElementById('meta-role').textContent = project.role || "---";
-    document.getElementById('meta-year').textContent = project.year || "---";
-    document.getElementById('meta-tools').textContent = project.tools || "---";
+  return `
+    <section class="cs-section reveal" aria-labelledby="s-${index}">
+      <p class="cs-section__num" aria-hidden="true">${String(index + 1).padStart(2, "0")}</p>
+      <div class="cs-section__content">
+        <h2 id="s-${index}">${fmt(tr(section.title))}</h2>
+        ${body}
+      </div>
+    </section>`;
+}
 
-    // --> Contenu Narratif Long
-    document.getElementById('narrative-title-1').textContent = project.narrativeTitle1 || "Le Concept";
-    document.getElementById('narrative-text-1').textContent = project.narrativeText1 || project.amorce;
-    
-    document.getElementById('narrative-title-2').textContent = project.narrativeTitle2 || "La Réalisation";
-    document.getElementById('narrative-text-2').textContent = project.narrativeText2 || "...";
+function renderStudy() {
+  const main = document.getElementById("case-content");
+  if (!main) return;
 
-    // --> Galerie Dynamique
-    const galleryContainer = document.getElementById('detail-gallery');
-    galleryContainer.innerHTML = ''; // Nettoyage de la zone
+  if (!study) {
+    document.title = `${UI[LANG].not_found_title} · ${SITE.name}`;
+    main.innerHTML = `
+      <div class="container cs-empty">
+        <h1>${t("not_found_title")}</h1>
+        <p>${t("not_found_text")}</p>
+        <a class="btn" href="index.html">${t("back_home")}</a>
+      </div>`;
+    return;
+  }
 
-    if (project.gallery && project.gallery.length > 0) {
-        // Première image (pleine largeur)
-        const imgFull = document.createElement('img');
-        imgFull.src = project.gallery[0];
-        imgFull.alt = `Galerie ${project.title} 1`;
-        imgFull.className = 'gallery-img';
-        galleryContainer.appendChild(imgFull);
+  document.title = `${plain(tr(study.title))} · ${SITE.name}`;
 
-        // Images suivantes (grille 2 colonnes)
-        if (project.gallery.length > 1) {
-            const grid = document.createElement('div');
-            grid.className = 'gallery-grid';
-            
-            for (let i = 1; i < project.gallery.length; i++) {
-                const innerImg = document.createElement('img');
-                innerImg.src = project.gallery[i];
-                innerImg.alt = `Galerie ${project.title} ${i + 1}`;
-                innerImg.className = 'gallery-img';
-                grid.appendChild(innerImg);
-            }
-            galleryContainer.appendChild(grid);
-        }
-    }
+  const meta = [
+    { label: UI[LANG].detail_year, value: study.year },
+    { label: UI[LANG].detail_status, value: tr(study.status) },
+    ...study.meta.map(m => ({ label: tr(m.label), value: tr(m.value) }))
+  ];
 
-    // 4. Lien vers le projet suivant
-    let nextIndex = projectIndex + 1;
-    if (nextIndex >= projectsData.length) {
-        nextIndex = 0; // Revenir au premier quand on est au dernier
-    }
-    const nextProject = projectsData[nextIndex];
-    
-    const nextLink = document.getElementById('next-project-link');
-    nextLink.innerHTML = `${nextProject.title} <span class="arrow">→</span>`;
-    nextLink.href = `projet-detail.html?id=${nextProject.id}`;
+  const links = (study.links || []).filter(l => l.url).map(l =>
+    `<a class="btn btn--ghost" href="${l.url}" target="_blank" rel="noopener">${fmt(tr(l.label))} <span aria-hidden="true">↗</span></a>`
+  ).join("");
 
-    // 5. Animation d'entrée
-    setTimeout(() => {
-        document.body.classList.add('visible');
-    }, 100);
+  const cover = study.cover
+    ? `<img class="cover cs-cover" src="${study.cover}" alt="${fmt(plain(tr(study.title)))}">`
+    : `<div class="cover cover--placeholder cs-cover" aria-hidden="true">
+         <span class="cover__initial">${fmt(plain(tr(study.title)).charAt(0))}</span>
+         <span class="cover__note">${t("cover_placeholder")}</span>
+       </div>`;
+
+  const next = CASE_STUDIES[(caseIndex + 1) % CASE_STUDIES.length];
+
+  main.innerHTML = `
+    <header class="cs-hero container">
+      <p class="eyebrow">${fmt(tr(study.kind))}</p>
+      <h1 class="cs-hero__title">${fmt(tr(study.title))}</h1>
+      <p class="cs-hero__tagline">${fmt(tr(study.tagline))}</p>
+      <dl class="cs-meta">
+        ${meta.map(m => `<div><dt>${fmt(m.label)}</dt><dd>${fmt(m.value)}</dd></div>`).join("")}
+      </dl>
+      ${links ? `<div class="cs-links">${links}</div>` : ""}
+    </header>
+
+    <div class="container">${cover}</div>
+
+    <div class="container cs-body">
+      ${study.sections.map(sectionHTML).join("")}
+    </div>
+
+    <nav class="container cs-next" aria-label="${fmt(UI[LANG].next_case)}">
+      <span class="cs-next__label">${t("next_case")}</span>
+      <a class="cs-next__link" href="projet-detail.html?id=${next.id}">${fmt(tr(next.title))} <span aria-hidden="true">→</span></a>
+    </nav>`;
+}
+
+onRender(() => {
+  renderStudy();
+  revealOnScroll();
 });

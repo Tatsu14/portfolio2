@@ -1,122 +1,263 @@
-const projectsData = [
-    {
-        id: "1",
-        category: "web",
-        categoryLabel: "Web & Apps",
-        title: "L'Écho de l'Océan",
-        summary: "Re-conception complète de l'identité digitale pour une fondation marine.",
-        amorce: "La fondation 'Ocean Futures' souhaitait une expérience web immersive plutôt qu'un site institutionnel classique.",
-        mediaType: "image",
-        mediaUrl: "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&q=80&w=1200",
-        thumbnail: "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&q=80&w=800",
-        role: "Directeur Artistique & Développeur",
-        year: "2024",
-        tools: "Figma, Three.js, React",
-        heroImage: "https://images.unsplash.com/photo-1551244072-5d1289156213?q=80&w=2500&auto=format&fit=crop",
-        narrativeTitle1: "La Genèse",
-        narrativeText1: "Le défi principal de 'L'Écho de l'Océan' était de rendre l'infiniment profond accessible sur un écran plat. L'objectif n'était pas de lire de l'information, mais de la ressentir physiquement à chaque mouvement de la souris.",
-        narrativeTitle2: "Le Choix Esthétique",
-        narrativeText2: "Nous avons supprimé tout texte superflu. L'interface s'efface pour laisser la place à l'immensité bleue abyssale. Le scroll reproduit la fluidité et la pression de l'eau.",
-        gallery: [
-            "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1200",
-            "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800",
-            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800"
-        ]
+/* ==========================================================================
+   CONTENU DU PORTFOLIO
+   --------------------------------------------------------------------------
+   Tout le texte du site vit ici. Chaque texte existe en deux langues :
+   { fr: "…", en: "…" }.
+   Les passages entre [[ ]] s'affichent surlignés : ce sont des éléments à
+   compléter ou à valider avant l'envoi des candidatures.
+   ========================================================================== */
+
+const SITE = {
+  // Passe à false quand tous les [[ ]] ont disparu : le bandeau
+  // « Version de travail » disparaît alors.
+  draft: true,
+  name: "Maxime Cavallari",
+  email: "maximecav4@gmail.com",
+  links: [
+    { label: "GitHub", url: "https://github.com/Tatsu14" },
+    { label: "LinkedIn", url: null },   // [[ajouter l'URL LinkedIn]]
+    { label: "Instagram", url: null }   // [[compte artiste, quand il sera prêt]]
+  ]
+};
+
+/* --------------------------------------------------------------------------
+   ÉTUDES DE CAS (pages détaillées)
+   -------------------------------------------------------------------------- */
+const CASE_STUDIES = [
+  {
+    id: "proserpine",
+    title: { fr: "Proserpine", en: "Proserpine" },
+    tagline: {
+      fr: "Savoir dans quelle poubelle jeter un emballage, en un seul scan.",
+      en: "Know which bin a package goes in, with a single scan."
     },
-    {
-        id: "2",
-        category: "texte",
-        categoryLabel: "Scénario",
-        title: "La Dernière Aube",
-        summary: "Scénario de court-métrage (Science-fiction intimiste).",
-        amorce: "Un huis clos écrit pour format court. L'enjeu était de faire ressentir l'angoisse par le silence.",
-        mediaType: "script",
-        mediaContent: `<div class="script-format"><p class="scene-heading">INT. VAISSEAU DE SECOURS - NUIT</p><p class="action">Le bourdonnement sourd du moteur principal s'estompe. ELARA (30s) vérifie frénétiquement les jauges.</p><p class="character">ELARA</p><p class="dialogue">Il n'y a plus rien... Houston, les réserves primaires sont à plat.</p></div>`,
-        thumbnail: "https://images.unsplash.com/photo-1455390582262-044cdead27d8?auto=format&fit=crop&q=80&w=800",
-        role: "Auteur & Scénariste",
-        year: "2025",
-        tools: "Final Draft, Notion",
-        heroImage: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2500&auto=format&fit=crop",
-        narrativeTitle1: "La Note d'Intention",
-        narrativeText1: "L'Espace est souvent représenté dans le cinéma par des effets visuels assourdissants. J'ai voulu écrire à l'opposé : sur le silence morbide, et l'acceptation de la fin. Le scénario est d'une construction millimétrée.",
-        narrativeTitle2: "Le Défi Littéraire",
-        narrativeText2: "Il fallait transmettre l'émotion de l'acteur uniquement via le didascalies (descriptions d'actions), car le personnage ne parle quasiment jamais durant les 12 pages du récit.",
-        gallery: [
-            "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=1200", 
-            "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800",
-            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800"
+    kind: { fr: "Application mobile (PWA)", en: "Mobile app (PWA)" },
+    year: "2026",
+    status: { fr: "V1 en ligne", en: "V1 live" },
+    meta: [
+      { label: { fr: "Rôle", en: "Role" },
+        value: { fr: "Recherche, conception et développement, seul", en: "Research, design and development, solo" } },
+      { label: { fr: "Cadre", en: "Scope" },
+        value: { fr: "Moins de 2 mois · budget 0 € · [[projet perso ou de cours ?]]", en: "Under 2 months · €0 budget · [[personal or school project?]]" } },
+      { label: { fr: "Technique", en: "Stack" },
+        value: { fr: "Vite · JavaScript · PWA", en: "Vite · JavaScript · PWA" } }
+    ],
+    links: [
+      { label: { fr: "Ouvrir l’app", en: "Open the app" }, url: "https://proserpine-design.vercel.app" },
+      { label: { fr: "Code source [[dépôt public ?]]", en: "Source code [[public repo?]]" }, url: "https://github.com/Tatsu14/proserpine" }
+    ],
+    cover: null, // ex. "images/proserpine-couverture.png"
+    sections: [
+      {
+        title: { fr: "Contexte", en: "Context" },
+        paragraphs: [{
+          fr: "Proserpine est née d’une frustration personnelle : au quotidien, trier ses déchets ressemble trop souvent à une devinette. J’ai mené le projet seul, en moins de deux mois et sans budget, de la recherche jusqu’à une application utilisable.",
+          en: "Proserpine started from a personal frustration: day to day, sorting waste too often feels like a guessing game. I ran the project solo, in under two months and with no budget, from research to a working app."
+        }]
+      },
+      {
+        title: { fr: "Le problème", en: "The problem" },
+        paragraphs: [{
+          fr: "Les consignes de tri imprimées sur les emballages sont floues et trop générales. Résultat : on hésite, on cherche… ou on abandonne. Et là où la poubelle est pesée et facturée, c’est le consommateur qui paie un suremballage qu’il n’a pas choisi.",
+          en: "Sorting instructions printed on packaging are vague and too generic. So people hesitate, search… or give up. And where household waste is weighed and billed, consumers pay for over-packaging they never chose."
+        }]
+      },
+      {
+        title: { fr: "Ce que j’ai appris", en: "What I learned" },
+        paragraphs: [{
+          fr: "Avant d’écrire une ligne de code, j’ai formulé mes hypothèses (« Je pense que… pour… va permettre… ») et préparé un guide d’entretien, puis mené un entretien pour vérifier le besoin.",
+          en: "Before writing a single line of code, I wrote down my hypotheses (“I believe that… for… will…”) and prepared an interview guide, then ran an interview to check the need."
+        }, {
+          fr: "Il a surtout confirmé une chose : l’envie de bien trier est là, et l’effort souvent aussi. Ce qui bloque, ce sont des informations trop floues et trop générales. Et personne n’a envie de faire de longues recherches juste pour savoir dans quelle poubelle jeter un emballage.",
+          en: "It mainly confirmed one thing: people want to sort properly, and often make the effort. What stops them is information that is too vague and too generic. And nobody wants to dig through long searches just to know which bin a package goes in."
+        }],
+        callout: {
+          fr: "Le frein, ce n’est pas la motivation. C’est l’accès à une information claire, au bon moment.",
+          en: "The barrier isn’t motivation. It’s access to clear information, at the right moment."
+        }
+      },
+      {
+        title: { fr: "Décisions de conception", en: "Design decisions" },
+        items: [
+          { title: { fr: "Un seul geste", en: "One gesture" },
+            text: { fr: "Scanner le code-barres suffit pour obtenir la consigne de tri : aucune recherche à faire.", en: "Scanning the barcode is enough to get the sorting instruction: no searching required." } },
+          { title: { fr: "Zéro leçon de morale", en: "No lecturing" },
+            text: { fr: "Pas de « éco » dans le nom, pas de culpabilisation : un ton direct, ludique et encourageant.", en: "No “eco” in the name, no guilt-tripping: a direct, playful, encouraging tone." } },
+          { title: { fr: "Proposer plutôt que juger", en: "Suggest, don’t judge" },
+            text: { fr: "Quand un produit est mal emballé, l’app suggère une alternative mieux conçue. [[présent dans la V1 ?]]", en: "When a product is poorly packaged, the app suggests a better-designed alternative. [[in V1?]]" } },
+          { title: { fr: "Un créneau libre", en: "An open niche" },
+            text: { fr: "Yuka parle santé, Greenly parle carbone : Proserpine se concentre sur la fin de vie de l’emballage.", en: "Yuka covers health, Greenly covers carbon: Proserpine focuses on the packaging’s end of life." } },
+          { title: { fr: "Installable sans store", en: "Installable, no store" },
+            text: { fr: "Une application web installable sur téléphone (PWA). [[pourquoi ce choix ?]]", en: "A web app you can install on your phone (PWA). [[why this choice?]]" } }
         ]
+      },
+      {
+        title: { fr: "L’IA dans le projet", en: "AI in the project" },
+        ai: {
+          did: [
+            { fr: "[[ex. m’aider à structurer le brief produit (méthode WDS ?)]]", en: "[[e.g. helped structure the product brief (WDS method?)]]" },
+            { fr: "[[ex. générer une partie du code dans Antigravity]]", en: "[[e.g. generated part of the code in Antigravity]]" },
+            { fr: "[[à compléter]]", en: "[[to complete]]" }
+          ],
+          decided: [
+            { fr: "Le problème de départ et la cible [[à confirmer]]", en: "The starting problem and the target users [[to confirm]]" },
+            { fr: "Les hypothèses à vérifier et les questions d’entretien [[à confirmer]]", en: "The hypotheses to test and the interview questions [[to confirm]]" },
+            { fr: "[[à compléter]]", en: "[[to complete]]" }
+          ]
+        }
+      },
+      {
+        title: { fr: "Résultat", en: "Outcome" },
+        paragraphs: [{
+          fr: "Une V1 fonctionnelle, installable sur téléphone. L’interface et l’algorithme de score sont encore imparfaits : c’est une première version assumée, à améliorer.",
+          en: "A working V1 you can install on your phone. The interface and the scoring algorithm are still rough: a deliberate first version, to be improved."
+        }]
+      },
+      {
+        title: { fr: "La suite", en: "What’s next" },
+        list: [
+          { fr: "Une saisie manuelle quand le code-barres n’est pas reconnu", en: "Manual entry when the barcode isn’t recognised" },
+          { fr: "Un guide de tri consultable à tout moment", en: "A sorting guide available at any time" },
+          { fr: "Des alternatives suggérées automatiquement", en: "Automatically suggested alternatives" },
+          { fr: "Mesurer l’impact : poids trié, CO₂ évité [[toujours d’actualité ?]]", en: "Measuring impact: weight sorted, CO₂ avoided [[still planned?]]" }
+        ]
+      }
+    ]
+  },
+
+  {
+    id: "studyspace",
+    title: { fr: "Studyspace", en: "Studyspace" },
+    tagline: {
+      fr: "Un espace de révision tout-en-un, né de mes propres besoins d’étudiant.",
+      en: "An all-in-one study space, born from my own needs as a student."
     },
-    {
-        id: "3",
-        category: "visuel",
-        categoryLabel: "Affiche",
-        title: "Festival Rhizome",
-        summary: "Direction visuelle pour le festival de musiques électroniques.",
-        amorce: "Création d'une identité visuelle radicale basée sur des formes organiques et brutales.",
-        mediaType: "image",
-        mediaUrl: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
-        thumbnail: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=800",
-        role: "Graphiste & Directeur Artistique",
-        year: "2026",
-        tools: "Photoshop, Illustrator, Encre de chine",
-        heroImage: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=2500&auto=format&fit=crop",
-        narrativeTitle1: "Le Brief",
-        narrativeText1: "Le festival désirait rompre avec les codes 'Néon et lasers' très présents dans la scène techno. Ils souhaitaient évoquer la Terre, l'organique, et le brutal.",
-        narrativeTitle2: "L'Exécution",
-        narrativeText2: "J'ai scanné de véritables taches d'encre de chine mêlées à des plantes numérisées en très haute résolution, pour concevoir des affiches qui rappellent presque un livre de biologie mystique.",
-        gallery: [
-            "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?q=80&w=1200",
-            "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?q=80&w=800",
-            "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?q=80&w=800"
+    kind: { fr: "Application web", en: "Web app" },
+    year: "[[année]]",
+    status: { fr: "En ligne · usage personnel", en: "Live · personal use" },
+    meta: [
+      { label: { fr: "Rôle", en: "Role" },
+        value: { fr: "Conception et développement, seul [[à confirmer]]", en: "Design and development, solo [[to confirm]]" } }
+    ],
+    links: [
+      { label: { fr: "Ouvrir l’app", en: "Open the app" }, url: "https://studyspace-eight.vercel.app" }
+    ],
+    cover: null,
+    sections: [
+      {
+        title: { fr: "Origine", en: "Origin" },
+        paragraphs: [{
+          fr: "Studyspace est né de mes propres révisions : il me fallait un seul endroit pour organiser mes matières, créer des fiches et m’entraîner.",
+          en: "Studyspace came out of my own revision: I needed one place to organise my subjects, write study cards and practise."
+        }]
+      },
+      {
+        title: { fr: "Ce que fait l’app", en: "What the app does" },
+        list: [
+          { fr: "Matières et fiches de cours", en: "Subjects and study cards" },
+          { fr: "Quiz pour s’entraîner", en: "Quizzes to practise" },
+          { fr: "Une base d’œuvres et une section questions / réponses", en: "A library of works and a Q&A section" },
+          { fr: "Tags et recherche", en: "Tags and search" },
+          { fr: "Export et import des données", en: "Data export and import" }
         ]
+      },
+      {
+        title: { fr: "La suite", en: "What’s next" },
+        paragraphs: [{
+          fr: "Transformer cet outil personnel en application proposée à d’autres étudiants. [[déroulé complet à définir ensemble]]",
+          en: "Turn this personal tool into an app offered to other students. [[full case study to define together]]"
+        }]
+      }
+    ]
+  },
+
+  {
+    id: "vers-le-mordor",
+    title: { fr: "Vers le Mordor", en: "Walk to Mordor" },
+    tagline: {
+      fr: "Faire de chaque sortie sportive une étape du voyage vers le Mordor.",
+      en: "Turn every workout into a leg of the journey to Mordor."
     },
-    {
-        id: "4",
-        category: "film",
-        categoryLabel: "Court-Métrage",
-        title: "L'Éclipse Écarlate",
-        summary: "Une descente aux enfers chronométrée.",
-        amorce: "Ce film explore comment la pression du temps détruit la raison.",
-        mediaType: "video",
-        mediaUrl: "https://www.youtube.com/embed/Pj-hTWEJNcU",
-        thumbnail: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=800",
-        role: "Réalisateur & Scénariste",
-        year: "2026",
-        tools: "DaVinci Resolve, RED Camera",
-        heroImage: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2500&auto=format&fit=crop",
-        narrativeTitle1: "La Genèse",
-        narrativeText1: "Le défi principal de L'Éclipse Écarlate était de concevoir une narration exclusivement fondée sur le suspense horloger. Le spectateur sait qu'il ne reste que quatorze minutes avant la fin de l'événement astronomique, mais les personnages l'ignorent. Le design sonore, ainsi que le rythme du montage, ont été bâtis pour comprimer le temps au maximum, créant une anxiété sourde devenant peu à peu insupportable.",
-        narrativeTitle2: "Le Choix Esthétique",
-        narrativeText2: "Pour le traitement numérique, je voulais échapper à l'étalonnage traditionnel gris des films de genre. En optant pour un rouge saturé extrêmement fort qui envahit peu à peu l'image au fur et à mesure que la lune disparaît, je pouvais exprimer la fureur sans avoir besoin de montrer l'horreur visuelle complète de manière littérale.",
-        gallery: [
-            "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?q=80&w=1200",
-            "https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=800",
-            "https://images.unsplash.com/photo-1518131362841-f2f64fcc8b33?q=80&w=800"
+    kind: { fr: "Application web", en: "Web app" },
+    year: "[[année]]",
+    status: { fr: "Prototype en cours", en: "Work in progress" },
+    meta: [
+      { label: { fr: "Rôle", en: "Role" },
+        value: { fr: "Conception et développement, seul [[à confirmer]]", en: "Design and development, solo [[to confirm]]" } },
+      { label: { fr: "Note", en: "Note" },
+        value: { fr: "Projet de fan, non officiel", en: "Unofficial fan project" } }
+    ],
+    links: [
+      { label: { fr: "Ouvrir l’app", en: "Open the app" }, url: "https://lotr-walking.vercel.app" }
+    ],
+    cover: null,
+    sections: [
+      {
+        title: { fr: "Origine", en: "Origin" },
+        paragraphs: [{
+          fr: "Une publicité Instagram présentait une app qui fait parcourir la distance du Seigneur des anneaux, mais sans aucun lien avec le sport. J’ai voulu en faire une vraie source de motivation pendant l’effort.",
+          en: "An Instagram ad showed an app that lets you travel the distance of The Lord of the Rings, but with no link to exercise. I wanted to turn it into real motivation while you work out."
+        }]
+      },
+      {
+        title: { fr: "Ce que fait l’app", en: "What the app does" },
+        list: [
+          { fr: "2 871 km découpés en 31 étapes, de Cul-de-Sac au Mordor", en: "2,871 km split into 31 stages, from Bag End to Mordor" },
+          { fr: "Suivi GPS en extérieur", en: "Outdoor GPS tracking" },
+          { fr: "Mode intérieur avec allure réglable", en: "Indoor mode with adjustable pace" },
+          { fr: "Fonctionne hors ligne", en: "Works offline" },
+          { fr: "Hauts faits : distance de la semaine, meilleures sorties", en: "Achievements: weekly distance, best outings" }
         ]
+      },
+      {
+        title: { fr: "État et suite", en: "Status and next steps" },
+        paragraphs: [{
+          fr: "C’est un prototype : le strict minimum fonctionne, et de grosses améliorations sont prévues. [[lesquelles ?]]",
+          en: "It’s a prototype: the bare minimum works, and major improvements are planned. [[which ones?]]"
+        }]
+      }
+    ]
+  }
+];
+
+/* --------------------------------------------------------------------------
+   AUTRES CRÉATIONS (cartes simples, sans page détaillée)
+   -------------------------------------------------------------------------- */
+const OTHER_WORKS = [
+  {
+    id: "initiale-vermeille",
+    title: { fr: "L’Initiale Vermeille", en: "L’Initiale Vermeille" },
+    category: { fr: "Scénario · Site web", en: "Screenplay · Website" },
+    year: "2025–2026",
+    text: {
+      fr: "Scénario écrit en 1re année, prolongé par un site web que j’ai codé quasi intégralement seul, une affiche et des fiches personnages.",
+      en: "A screenplay written in my first year, extended with a website I coded almost entirely on my own, a poster and character sheets."
     },
-    {
-        id: "5",
-        category: "visuel",
-        categoryLabel: "Création 3D",
-        title: "Matière Brute",
-        summary: "Modélisation 3D d'objets artisanaux pour un e-commerce éthique.",
-        amorce: "Au lieu de simples photos, j'ai modélisé les objets pour permettre aux utilisateurs de les faire tourner.",
-        mediaType: "iframe",
-        mediaUrl: "https://sketchfab.com/models/442c548d94744641ba279ae94b5f45ec/embed",
-        thumbnail: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=800",
-        role: "Artiste 3D",
-        year: "2023",
-        tools: "Blender, Substance Painter",
-        heroImage: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2500&auto=format&fit=crop",
-        narrativeTitle1: "Le Problème",
-        narrativeText1: "Les poteries artisanales ont des imperfections magnifiques qui ne transparaissent pas en simple photographie 2D.",
-        narrativeTitle2: "La Solution Technologique",
-        narrativeText2: "Nous avons utilisé un script Sketchfab léger pour injecter les modèles WebGL directement dans la page produit. J'ai accentué les cartes de relief (bump maps) pour que le client ait envie de toucher l'écran.",
-        gallery: [
-            "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200",
-            "https://images.unsplash.com/photo-1634128221889-82ed6efeb916?q=80&w=800",
-            "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800"
-        ]
-    }
+    link: { label: { fr: "Voir le site", en: "Visit the site" }, url: "https://initiale-vermeille.vercel.app" },
+    cover: null
+  },
+  {
+    id: "chimera",
+    title: { fr: "Chimera", en: "Chimera" },
+    category: { fr: "Roman · Fantasy", en: "Novel · Fantasy" },
+    year: { fr: "En cours", en: "Ongoing" },
+    text: {
+      fr: "Saga de fantasy en cours d’écriture, dans le monde de Vaeloria : un univers construit en profondeur, jusqu’à la biologie de ses créatures.",
+      en: "A fantasy saga in progress, set in the world of Vaeloria: an in-depth worldbuilding, down to the biology of its creatures."
+    },
+    link: null,
+    cover: null
+  },
+  {
+    id: "prisme-trinity",
+    title: { fr: "Prisme Trinity", en: "Prisme Trinity" },
+    category: { fr: "Média · Instagram", en: "Media · Instagram" },
+    year: { fr: "En cours", en: "Ongoing" },
+    text: {
+      fr: "Compte Instagram qui croise pop culture et droit : ligne éditoriale, recherche et direction visuelle.",
+      en: "An Instagram account at the crossroads of pop culture and law: editorial line, research and visual direction."
+    },
+    link: null, // [[lien du compte]]
+    cover: null
+  }
 ];

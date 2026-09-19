@@ -1,15 +1,40 @@
-# Mon Application Web
+# Portfolio B2 · Maxime Cavallari
 
-Il s'agit d'une structure de base (boilerplate) prête à l'emploi pour commencer à coder une application web avec un design moderne.
+Portfolio de product design pour les demandes de stage. Site statique en HTML, CSS et JavaScript, sans framework ni installation.
 
-## Contenu du dossier
+## Voir le site
 
-- `index.html` : La page d'accueil principale de votre application.
-- `css/style.css` : La feuille de style (Design moderne, couleurs sombres, esthétique glassmorphism).
-- `js/main.js` : Le fichier Javascript contenant la logique d'interaction et les animations dynamiques.
+Double-cliquer sur `index.html`. Le site s'ouvre dans le navigateur, sans connexion nécessaire (sauf pour la police Inter).
 
-## Comment l'utiliser ?
+## Où modifier quoi
 
-1. Ouvrez le fichier `index.html` dans votre navigateur (Google Chrome, Firefox, Safari) pour voir l'application.
-2. Modifiez le code dans Visual Studio Code ou votre éditeur de code préféré.
-3. Rafraîchissez votre navigateur pour voir les changements !
+| Je veux changer… | Fichier |
+|---|---|
+| Le texte d'un projet, ajouter un projet | `js/data.js` |
+| Les textes de l'accueil, des boutons, de la méthode | `js/site.js` (objet `UI`, en `fr` et en `en`) |
+| Les couleurs, les tailles, la mise en page | `css/style.css` (les couleurs sont en haut du fichier) |
+| Une image de projet | déposer l'image dans `images/`, puis renseigner `cover: "images/nom.png"` dans `js/data.js` |
+
+Les passages écrits entre `[[ ]]` s'affichent surlignés : ce sont des éléments à compléter ou à valider. Quand il n'en reste plus, passer `draft: true` à `false` dans `js/data.js` pour retirer le bandeau « Version de travail ».
+
+## Structure
+
+```
+index.html            Accueil : accroche, études de cas, méthode, autres créations, contact
+projet-detail.html    Page d'étude de cas (projet-detail.html?id=proserpine)
+css/style.css         Styles (sombre par défaut, variante claire)
+js/data.js            Contenu : projets, liens, e-mail
+js/site.js            Textes d'interface FR/EN, langue, thème, en-tête
+js/main.js            Construction de l'accueil
+js/detail.js          Construction des pages d'étude de cas
+images/               Captures et visuels
+```
+
+## Reste à faire avant les candidatures
+
+- [ ] Captures des projets (voir la liste dans la conversation avec Claude)
+- [ ] URL LinkedIn, lien Instagram artiste, lien Prisme Trinity
+- [ ] Vérifier que le dépôt GitHub de Proserpine est public
+- [ ] Compléter et valider tous les passages `[[ ]]`
+- [ ] Relire la version anglaise
+- [ ] Mise en ligne, puis ajouter l'image d'aperçu de partage (`og:image`)
