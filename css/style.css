@@ -1,0 +1,1022 @@
+/* ========================================================
+   VARIABLES DES THÈMES & PALETTES DE COULEURS (DARK MODE)
+======================================================== */
+:root {
+  /* Par défaut (remplacé par les data-themes) */
+  --bg-color: #000000;
+  --text-primary: #FFFFFF;
+  --text-secondary: #888888;
+  --accent-color: #555555;
+  --border-color: #222222;
+  --font-display: 'Inter', sans-serif;
+  --font-text: 'Inter', sans-serif;
+}
+
+/* THÈME 1: CINÉMATIQUE (MODERNE/BRUTALISTE) */
+[data-theme="modern"] {
+  --bg-color: #050505;
+  --text-primary: #FAFAFA;
+  --text-secondary: #777777;
+  --border-color: #1A1A1A;
+  --accent-color: #E50914; /* Rouge Cinéma profond et vibrant */
+  --font-display: 'Inter', sans-serif;
+  --font-text: 'Inter', sans-serif;
+}
+
+/* THÈME 2: SYSTÈME (FUTURISTE/CYBER) */
+[data-theme="system"] {
+  --bg-color: #02040A; /* Bleu très profond / Noir profond */
+  --text-primary: #00F0FF; /* Cyan Neon */
+  --text-secondary: #008B99;
+  --border-color: #101B2E;
+  --accent-color: #9D00FF; /* Flash purple */
+  --font-display: 'Orbitron', sans-serif;
+  --font-text: 'Rajdhani', sans-serif;
+}
+
+/* THÈME 3: VELVET (ÉLÉGANT/ROMANTIQUE) */
+[data-theme="velvet"] {
+  --bg-color: #110B0E; /* Noir prune velours */
+  --text-primary: #F9EBE0; /* Ivoire rosé */
+  --text-secondary: #A68E8E;
+  --border-color: #38252C;
+  --accent-color: #D4AF37; /* Or texturé */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-text: 'Cormorant Garamond', serif;
+}
+
+/* THÈME 4: GRIMOIRE (FANTASY/MYTHIQUE) */
+[data-theme="grimoire"] {
+  --bg-color: #0A0806; /* Noir marron très sombre */
+  --text-primary: #E8DCB8; /* Parchemin */
+  --text-secondary: #8F7657; /* Cuir usé */
+  --border-color: #2D2319;
+  --accent-color: #D35400; /* Flamme / Rubis */
+  --font-display: 'Cinzel Decorative', serif;
+  --font-text: 'Cormorant Garamond', serif;
+}
+
+/* ========================================================
+   RESET ET STRUCTURE DE BASE
+======================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-text);
+    /* Transition très douce quand on change la palette */
+    transition: background-color 0.8s ease, color 0.8s ease;
+    overflow-x: hidden;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-display, button, .chapter-number, .overlay-chapter {
+    font-family: var(--font-display);
+}
+
+/* ========================================================
+   HEADER & CONTACT HEADER
+======================================================== */
+.controls-panel {
+    position: fixed;
+    top: 30px;
+    right: 5%;
+    z-index: 1000;
+}
+
+.contact-btn-header {
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.contact-btn-header:hover {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* ========================================================
+   FOOTER (À PROPOS & CONTACT)
+======================================================== */
+.about-me {
+    max-width: 700px;
+    margin: 0 auto 5rem;
+    text-align: left;
+}
+
+.about-me h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.about-me p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+.contact-cta {
+    border-top: 1px solid var(--border-color);
+    padding-top: 5rem;
+}
+
+.social-links {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* ========================================================
+   PAGE PRINCIPALE (Prologue)
+======================================================== */
+#main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* L'Amorce du Portfolio (Hero) */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 7.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    margin-bottom: 2.5rem;
+}
+
+.hero-title .highlight {
+    color: var(--accent-color);
+    transition: color 0.6s ease;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 3vw, 2.2rem);
+    color: var(--text-secondary);
+    max-width: 850px;
+    font-weight: 300;
+}
+
+/* Filtres et Liste des Chapitres (Projets) */
+.works-intro {
+    padding: 10vh 0 5vh;
+}
+
+.works-intro h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 300;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.project-filters {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.project-filters button {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.project-filters button:hover, .project-filters button.active {
+    background: var(--text-primary);
+    color: var(--bg-color);
+    border-color: var(--text-primary);
+}
+
+.projects-list {
+    padding-bottom: 15vh;
+    display: grid;
+    gap: 5vh;
+    transition: all 0.5s ease;
+}
+
+/* ========================================================
+   DISPOSITIONS DES PROJETS (List, Grid, Cards)
+======================================================== */
+.project-chapter {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Base (List Layout - L'Éditorial) */
+.projects-list[data-layout="list"] .project-chapter {
+    border-top: 1px solid var(--border-color);
+    padding-top: 3rem;
+    flex-direction: row;
+}
+
+.projects-list[data-layout="list"] .project-chapter:hover {
+    padding-left: 2rem; /* Effet de décalage typique */
+}
+
+.projects-list[data-layout="list"] .project-thumb-container {
+    width: 250px;
+    height: 150px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease;
+}
+
+.projects-list[data-layout="list"] .project-chapter:hover .project-thumb-container {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.projects-list[data-layout="list"] .project-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects-list[data-layout="list"] .project-info {
+    flex-grow: 1;
+}
+
+/* Layout Grid (Visuel - Maçonnerie stylisée) */
+.projects-list[data-layout="grid"] {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.projects-list[data-layout="grid"] .project-chapter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.projects-list[data-layout="grid"] .project-thumb-container {
+    width: 100%;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.projects-list[data-layout="grid"] .project-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.projects-list[data-layout="grid"] .project-chapter:hover .project-thumb {
+    transform: scale(1.05);
+}
+
+/* Layout Cards (Moderne) */
+.projects-list[data-layout="cards"] {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.projects-list[data-layout="cards"] .project-chapter {
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.projects-list[data-layout="cards"] .project-chapter:hover {
+    transform: translateY(-5px);
+    border-color: var(--text-primary);
+}
+
+.projects-list[data-layout="cards"] .project-thumb-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.projects-list[data-layout="cards"] .project-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Eléments Communs */
+.chapter-number {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.project-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    transition: color 0.4s ease;
+}
+
+.projects-list[data-layout="list"] .project-title { font-size: clamp(3rem, 7vw, 5rem); }
+
+.project-summary {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+}
+
+.read-story-btn {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    position: relative;
+    padding-bottom: 0.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+.read-story-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--text-primary);
+    transition: width 0.4s ease;
+}
+
+.project-chapter:hover .read-story-btn::after {
+    width: 100%;
+}
+
+/* Pied de page (L'Épilogue) */
+.footer {
+    padding: 15vh 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+}
+
+.contact-link {
+    font-family: var(--font-display);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--accent-color);
+}
+
+/* ========================================================
+   SURCOUCHE NARRATIVE (Le Détail de l'Histoire du Projet)
+======================================================== */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color); /* Immersive */
+    z-index: 2000;
+    overflow-y: auto;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.8s ease;
+}
+
+.overlay.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    pointer-events: none;
+}
+
+.close-btn {
+    position: fixed;
+    top: 2rem;
+    left: 5%;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.close-btn:hover {
+    color: var(--text-primary);
+    transform: translateX(-5px);
+}
+
+.overlay-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 15vh 5% 15vh;
+}
+
+.overlay-hero {
+    margin-bottom: 5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 4rem;
+}
+
+.overlay-chapter {
+    display: block;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1em;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.overlay-hero h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.narrative-section {
+    margin-bottom: 6rem;
+}
+
+.narrative-section h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.narrative-section p {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: var(--text-secondary);
+}
+
+/* ========================================================
+   CONTENEURS MÉDIAS DYNAMIQUES (Overlay)
+======================================================== */
+.media-container {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.media-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.video-wrapper, .iframe-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    background: #000;
+    border-radius: 4px;
+}
+
+.video-wrapper iframe, .iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mode Scénario (Courier justifié) */
+.script-format {
+    background-color: #f7f7f7; /* Papier */
+    color: #111; /* Encre */
+    padding: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    border-radius: 4px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.script-format .scene-heading {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.script-format .action {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.script-format .character {
+    text-align: center;
+    text-transform: uppercase;
+    width: 50%;
+    margin: 2rem auto 0;
+}
+
+.script-format .parenthetical {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.script-format .dialogue {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 1.5rem;
+}
+
+/* Boutons d'action */
+.action-section {
+    margin-top: 4rem;
+    text-align: center;
+    padding-bottom: 10vh;
+}
+
+.solid-btn {
+    display: inline-block;
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    padding: 1rem 2rem;
+    font-family: var(--font-display);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.solid-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+/* ========================================================
+   ANIMATIONS D'APPARITION AU DÉFILEMENT (Scroll Reveal)
+======================================================== */
+.fade-in-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================================
+   OVERRIDES STRUCTURELS RADICAUX DES 4 THÈMES (DARK MODE)
+======================================================== */
+
+/* --- THÈME 1: CINÉMATIQUE (MODERNE/BRUTALISTE + CARDS) --- */
+[data-theme="modern"] .project-chapter {
+    border: none !important;
+    background: transparent !important;
+}
+[data-theme="modern"] .projects-list[data-layout="cards"] .project-chapter {
+    background: rgba(255,255,255,0.02) !important;
+    border: 1px solid var(--border-color) !important;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+[data-theme="modern"] .projects-list[data-layout="cards"] .project-chapter:hover {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 10px 40px rgba(229, 9, 20, 0.15) !important;
+    transform: translateY(-5px);
+}
+[data-theme="modern"] .project-title {
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+}
+[data-theme="modern"] .project-thumb-container {
+    border-radius: 6px !important;
+}
+[data-theme="modern"] .read-story-btn::after {
+    height: 4px;
+}
+[data-theme="modern"] .overlay {
+    background-color: rgba(5,5,5,0.98);
+}
+[data-theme="modern"] .projects-list[data-layout="list"] .project-chapter {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+[data-theme="modern"] .projects-list[data-layout="list"] .project-chapter:hover {
+    padding-left: 0;
+}
+[data-theme="modern"] .projects-list[data-layout="list"] .project-chapter:hover .project-info {
+    transform: translateX(40px);
+    transition: transform 0.4s ease;
+}
+
+/* --- THÈME 2: SYSTÈME (FUTURISTE/CYBER) --- */
+[data-theme="system"] .project-chapter {
+    background: rgba(0,240,255,0.02) !important;
+    border: 1px solid var(--border-color) !important;
+    clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+    border-radius: 0 !important;
+}
+[data-theme="system"] .project-chapter:hover {
+    border-color: var(--text-primary) !important;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2) inset;
+}
+[data-theme="system"] .project-thumb-container {
+    border-radius: 0 !important;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+[data-theme="system"] .project-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+[data-theme="system"] .read-story-btn {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+[data-theme="system"] .project-filters button {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    letter-spacing: 1px;
+}
+[data-theme="system"] .overlay {
+    background-image: linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    background-color: var(--bg-color);
+}
+
+/* --- THÈME 3: VELVET (ÉLÉGANT/ROMANTIQUE) --- */
+[data-theme="velvet"] .project-chapter {
+    transition: transform 1.2s ease, opacity 1s ease;
+    border-radius: 200px 200px 10px 10px !important;
+}
+[data-theme="velvet"] .projects-list[data-layout="list"] .project-chapter {
+    border-radius: 0 !important; /* Pas d'ovale en liste */
+}
+[data-theme="velvet"] .project-thumb-container {
+    border-radius: 50% !important; 
+    border: 1px solid var(--accent-color);
+    padding: 5px;
+    background: transparent;
+}
+[data-theme="velvet"] .projects-list[data-layout="grid"] .project-thumb-container,
+[data-theme="velvet"] .projects-list[data-layout="cards"] .project-thumb-container {
+    border-radius: 200px 200px 10px 10px !important; /* Arche */
+}
+[data-theme="velvet"] .project-thumb {
+    border-radius: inherit;
+}
+[data-theme="velvet"] .project-title {
+    font-style: italic;
+    font-weight: 300;
+}
+[data-theme="velvet"] .project-summary {
+    font-size: 1.3rem;
+    line-height: 2;
+}
+[data-theme="velvet"] .project-filters button {
+    border-radius: 30px;
+    border: 1px solid var(--accent-color);
+    font-style: italic;
+    padding: 10px 25px;
+}
+[data-theme="velvet"] .read-story-btn::after {
+    background-color: var(--accent-color);
+    height: 1px;
+}
+[data-theme="velvet"] .solid-btn {
+    border-radius: 50px;
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    border: 1px solid var(--accent-color);
+}
+[data-theme="velvet"] .overlay-hero {
+    border-bottom: 1px solid var(--accent-color);
+}
+
+/* --- THÈME 4: GRIMOIRE (FANTASY/MYTHIQUE) --- */
+[data-theme="grimoire"] .project-chapter {
+    background: #0E0B09 !important;
+    border: 3px double var(--border-color) !important;
+    border-radius: 4px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.8);
+    transition: transform 0.4s ease, border-color 0.4s ease;
+}
+[data-theme="grimoire"] .projects-list[data-layout="list"] .project-chapter {
+    border-top: 3px double var(--border-color) !important;
+    border-bottom: 3px double var(--border-color) !important;
+    border-left: none !important;
+    border-right: none !important;
+    background: transparent !important;
+    box-shadow: none;
+}
+[data-theme="grimoire"] .project-chapter:hover {
+    border-color: var(--accent-color) !important;
+}
+[data-theme="grimoire"] .project-thumb-container {
+    border-radius: 2px !important;
+    border: 1px solid var(--border-color);
+}
+[data-theme="grimoire"] .project-thumb {
+    filter: sepia(0.4) contrast(1.1); 
+    transition: filter 0.5s ease;
+}
+[data-theme="grimoire"] .project-chapter:hover .project-thumb {
+    filter: sepia(0) contrast(1.2);
+}
+[data-theme="grimoire"] .project-title {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+}
+[data-theme="grimoire"] .read-story-btn {
+    font-family: var(--font-display);
+    color: var(--accent-color);
+    letter-spacing: 0.15em;
+}
+[data-theme="grimoire"] .read-story-btn::after {
+    background-color: var(--accent-color);
+}
+[data-theme="grimoire"] .project-filters button {
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+    background: #15110E;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    font-family: var(--font-display);
+}
+[data-theme="grimoire"] .script-format {
+    background-color: #E8DCB8;
+    color: #2D2319;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.4), 0 10px 30px rgba(0,0,0,0.8);
+}
+[data-theme="grimoire"] .overlay {
+    background-color: rgba(10, 8, 6, 0.95);
+}
+
+/* ========================================================
+   PAGE DE DÉTAIL D'ÉTUDE DE CAS (projet-detail.html)
+======================================================== */
+.detail-page-body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.back-link-btn {
+    position: fixed;
+    top: 30px;
+    left: 4%;
+    z-index: 100;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s;
+}
+
+.back-link-btn:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateX(-5px);
+}
+
+/* Héro */
+.detail-hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 10% 5%;
+    overflow: hidden;
+}
+
+.detail-hero-bg {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    filter: brightness(0.5) saturate(1.2);
+}
+
+.detail-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 60%;
+    background: linear-gradient(to top, var(--bg-color) 0%, transparent 100%);
+    z-index: 2;
+}
+
+.detail-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+}
+
+.detail-title {
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    color: #FFFFFF;
+}
+
+.detail-subtitle {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: #DDDDDD; /* Garde une haute lisibilité sur le fond photo */
+    font-weight: 300;
+}
+
+/* Contenu Principal */
+.detail-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 5%;
+}
+
+.detail-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 5rem;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.meta-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-display);
+}
+
+.meta-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.text-block {
+    margin-bottom: 4rem;
+    max-width: 800px;
+}
+
+.text-block h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.text-block p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* Galerie */
+.detail-gallery {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* Footer Suivant */
+.detail-next {
+    padding: 15vh 5%;
+    background-color: #030303; 
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.next-label {
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+}
+
+.next-title {
+    font-size: clamp(2rem, 6vw, 4rem);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.4s;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.next-title:hover {
+    color: var(--accent-color);
+}
+
+.arrow {
+    transition: transform 0.4s;
+}
+
+.next-title:hover .arrow {
+    transform: translateX(20px);
+}

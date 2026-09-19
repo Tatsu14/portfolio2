@@ -1,0 +1,122 @@
+const projectsData = [
+    {
+        id: "1",
+        category: "web",
+        categoryLabel: "Web & Apps",
+        title: "L'Écho de l'Océan",
+        summary: "Re-conception complète de l'identité digitale pour une fondation marine.",
+        amorce: "La fondation 'Ocean Futures' souhaitait une expérience web immersive plutôt qu'un site institutionnel classique.",
+        mediaType: "image",
+        mediaUrl: "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&q=80&w=1200",
+        thumbnail: "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&q=80&w=800",
+        role: "Directeur Artistique & Développeur",
+        year: "2024",
+        tools: "Figma, Three.js, React",
+        heroImage: "https://images.unsplash.com/photo-1551244072-5d1289156213?q=80&w=2500&auto=format&fit=crop",
+        narrativeTitle1: "La Genèse",
+        narrativeText1: "Le défi principal de 'L'Écho de l'Océan' était de rendre l'infiniment profond accessible sur un écran plat. L'objectif n'était pas de lire de l'information, mais de la ressentir physiquement à chaque mouvement de la souris.",
+        narrativeTitle2: "Le Choix Esthétique",
+        narrativeText2: "Nous avons supprimé tout texte superflu. L'interface s'efface pour laisser la place à l'immensité bleue abyssale. Le scroll reproduit la fluidité et la pression de l'eau.",
+        gallery: [
+            "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1200",
+            "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800",
+            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800"
+        ]
+    },
+    {
+        id: "2",
+        category: "texte",
+        categoryLabel: "Scénario",
+        title: "La Dernière Aube",
+        summary: "Scénario de court-métrage (Science-fiction intimiste).",
+        amorce: "Un huis clos écrit pour format court. L'enjeu était de faire ressentir l'angoisse par le silence.",
+        mediaType: "script",
+        mediaContent: `<div class="script-format"><p class="scene-heading">INT. VAISSEAU DE SECOURS - NUIT</p><p class="action">Le bourdonnement sourd du moteur principal s'estompe. ELARA (30s) vérifie frénétiquement les jauges.</p><p class="character">ELARA</p><p class="dialogue">Il n'y a plus rien... Houston, les réserves primaires sont à plat.</p></div>`,
+        thumbnail: "https://images.unsplash.com/photo-1455390582262-044cdead27d8?auto=format&fit=crop&q=80&w=800",
+        role: "Auteur & Scénariste",
+        year: "2025",
+        tools: "Final Draft, Notion",
+        heroImage: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=2500&auto=format&fit=crop",
+        narrativeTitle1: "La Note d'Intention",
+        narrativeText1: "L'Espace est souvent représenté dans le cinéma par des effets visuels assourdissants. J'ai voulu écrire à l'opposé : sur le silence morbide, et l'acceptation de la fin. Le scénario est d'une construction millimétrée.",
+        narrativeTitle2: "Le Défi Littéraire",
+        narrativeText2: "Il fallait transmettre l'émotion de l'acteur uniquement via le didascalies (descriptions d'actions), car le personnage ne parle quasiment jamais durant les 12 pages du récit.",
+        gallery: [
+            "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=1200", 
+            "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800",
+            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800"
+        ]
+    },
+    {
+        id: "3",
+        category: "visuel",
+        categoryLabel: "Affiche",
+        title: "Festival Rhizome",
+        summary: "Direction visuelle pour le festival de musiques électroniques.",
+        amorce: "Création d'une identité visuelle radicale basée sur des formes organiques et brutales.",
+        mediaType: "image",
+        mediaUrl: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=1200",
+        thumbnail: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=800",
+        role: "Graphiste & Directeur Artistique",
+        year: "2026",
+        tools: "Photoshop, Illustrator, Encre de chine",
+        heroImage: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=2500&auto=format&fit=crop",
+        narrativeTitle1: "Le Brief",
+        narrativeText1: "Le festival désirait rompre avec les codes 'Néon et lasers' très présents dans la scène techno. Ils souhaitaient évoquer la Terre, l'organique, et le brutal.",
+        narrativeTitle2: "L'Exécution",
+        narrativeText2: "J'ai scanné de véritables taches d'encre de chine mêlées à des plantes numérisées en très haute résolution, pour concevoir des affiches qui rappellent presque un livre de biologie mystique.",
+        gallery: [
+            "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?q=80&w=1200",
+            "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?q=80&w=800",
+            "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?q=80&w=800"
+        ]
+    },
+    {
+        id: "4",
+        category: "film",
+        categoryLabel: "Court-Métrage",
+        title: "L'Éclipse Écarlate",
+        summary: "Une descente aux enfers chronométrée.",
+        amorce: "Ce film explore comment la pression du temps détruit la raison.",
+        mediaType: "video",
+        mediaUrl: "https://www.youtube.com/embed/Pj-hTWEJNcU",
+        thumbnail: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=800",
+        role: "Réalisateur & Scénariste",
+        year: "2026",
+        tools: "DaVinci Resolve, RED Camera",
+        heroImage: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=2500&auto=format&fit=crop",
+        narrativeTitle1: "La Genèse",
+        narrativeText1: "Le défi principal de L'Éclipse Écarlate était de concevoir une narration exclusivement fondée sur le suspense horloger. Le spectateur sait qu'il ne reste que quatorze minutes avant la fin de l'événement astronomique, mais les personnages l'ignorent. Le design sonore, ainsi que le rythme du montage, ont été bâtis pour comprimer le temps au maximum, créant une anxiété sourde devenant peu à peu insupportable.",
+        narrativeTitle2: "Le Choix Esthétique",
+        narrativeText2: "Pour le traitement numérique, je voulais échapper à l'étalonnage traditionnel gris des films de genre. En optant pour un rouge saturé extrêmement fort qui envahit peu à peu l'image au fur et à mesure que la lune disparaît, je pouvais exprimer la fureur sans avoir besoin de montrer l'horreur visuelle complète de manière littérale.",
+        gallery: [
+            "https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?q=80&w=1200",
+            "https://images.unsplash.com/photo-1542204165-65bf26472b9b?q=80&w=800",
+            "https://images.unsplash.com/photo-1518131362841-f2f64fcc8b33?q=80&w=800"
+        ]
+    },
+    {
+        id: "5",
+        category: "visuel",
+        categoryLabel: "Création 3D",
+        title: "Matière Brute",
+        summary: "Modélisation 3D d'objets artisanaux pour un e-commerce éthique.",
+        amorce: "Au lieu de simples photos, j'ai modélisé les objets pour permettre aux utilisateurs de les faire tourner.",
+        mediaType: "iframe",
+        mediaUrl: "https://sketchfab.com/models/442c548d94744641ba279ae94b5f45ec/embed",
+        thumbnail: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=800",
+        role: "Artiste 3D",
+        year: "2023",
+        tools: "Blender, Substance Painter",
+        heroImage: "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2500&auto=format&fit=crop",
+        narrativeTitle1: "Le Problème",
+        narrativeText1: "Les poteries artisanales ont des imperfections magnifiques qui ne transparaissent pas en simple photographie 2D.",
+        narrativeTitle2: "La Solution Technologique",
+        narrativeText2: "Nous avons utilisé un script Sketchfab léger pour injecter les modèles WebGL directement dans la page produit. J'ai accentué les cartes de relief (bump maps) pour que le client ait envie de toucher l'écran.",
+        gallery: [
+            "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200",
+            "https://images.unsplash.com/photo-1634128221889-82ed6efeb916?q=80&w=800",
+            "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800"
+        ]
+    }
+];

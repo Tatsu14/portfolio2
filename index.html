@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Narratif - Storyteller & Designer</title>
+    <!-- Importation des polices pour les 4 concepts radicaux -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,400&family=Inter:wght@300;600;900&family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- PANNEAU DE CONTRÔLES (Thèmes & Dispositions) -->
+    <!-- HEADER CONTACT -->
+    <div class="controls-panel">
+        <a href="#contact-section" class="contact-btn-header">Travaillons ensemble</a>
+    </div>
+
+    <!-- PAGE PRINCIPALE -->
+    <main id="main-content">
+        <!-- Le Prologue -->
+        <header class="hero">
+            <h1 class="hero-title fade-in-scroll">Je suis un <br><span class="highlight">Storyteller</span> <br>& <span class="highlight">Designer</span>.</h1>
+            <p class="hero-subtitle fade-in-scroll">Je façonne des récits immersifs qui donnent vie aux idées, aux marques et aux objets. Mon approche est à la croisée des mots et de la matière graphique.</p>
+        </header>
+
+        <section class="works-intro fade-in-scroll">
+            <h2>Voici les réalisations que j'ai conçues et racontées.</h2>
+            
+            <!-- BARRE DE FILTRES -->
+            <nav class="project-filters">
+                <button data-filter="all" class="active">Tout</button>
+                <button data-filter="web">Web & Apps</button>
+                <button data-filter="film">Film & Vidéo</button>
+                <button data-filter="texte">Textes & Scénarios</button>
+                <button data-filter="visuel">Design & 3D</button>
+            </nav>
+        </section>
+
+        <!-- Liste des Projets (Générée dynamiquement par Javascript) -->
+        <section class="projects-list" id="projects-container" data-layout="cards">
+            <!-- Injecté par main.js -->
+        </section>
+        
+        <!-- À PROPOS ET CONTACT -->
+        <footer class="footer fade-in-scroll" id="contact-section">
+            <div class="about-me">
+                <h3>En quelques mots...</h3>
+                <p>Je suis designer et racontreur d'histoires. Mon cœur de métier consiste à bâtir des ponts entre l'esthétique pure et la narration fluide. Qu'il s'agisse de concevoir une image de marque, designer une interface web épurée ou de rédiger les embranchements d'un scénario interactif, j'accompagne mes clients de la conceptualisation philosophique jusqu'au polissage final.</p>
+            </div>
+            
+            <div class="contact-cta">
+                <p>Écrivons le prochain chapitre.</p>
+                <a href="mailto:maximecav4@gmail.com" class="contact-link">maximecav4@gmail.com</a>
+                
+                <div class="social-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">ArtStation</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- SURCOUCHE LECTURE (Détail du projet fluide) -->
+    <div id="project-overlay" class="overlay hidden">
+        <button id="close-overlay" class="close-btn">← Refermer le livre</button>
+        
+        <div class="overlay-content">
+            <header class="overlay-hero">
+                <span class="overlay-chapter" id="detail-category">Catégorie</span>
+                <h1 id="detail-title">Titre du projet</h1>
+            </header>
+
+            <div class="narrative-content">
+                <section class="narrative-section">
+                    <h3>Aperçu Rapide</h3>
+                    <p id="detail-amorce">...</p>
+                    
+                    <!-- CONTENEUR MÉDIA DYNAMIQUE (Vidéo, Iframe, Image, Scénario) -->
+                    <div id="media-container" class="media-container">
+                        <!-- Généré par JS -->
+                    </div>
+                </section>
+                
+                <section class="narrative-section action-section">
+                     <a href="projet-detail.html" id="detail-link" class="solid-btn">Voir le projet en détail →</a>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
