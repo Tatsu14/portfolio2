@@ -38,7 +38,7 @@ const CASE_STUDIES = [
       { label: { fr: "Rôle", en: "Role" },
         value: { fr: "Recherche, conception et développement, seul", en: "Research, design and development, solo" } },
       { label: { fr: "Cadre", en: "Scope" },
-        value: { fr: "Projet de cours [[lequel ?]] · moins de 2 mois · budget 0 €", en: "School project [[which course?]] · under 2 months · €0 budget" } },
+        value: { fr: "Projet dans le cadre d'un cours de Design Thinking · moins de 2 mois · budget 0 € (utilisation d'outils gratuits)", en: "School project from Design Thinking course · under 2 months · €0 budget (use of free tools)" } },
       { label: { fr: "Technique", en: "Stack" },
         value: { fr: "Vite · JavaScript · PWA", en: "Vite · JavaScript · PWA" } }
     ],
@@ -140,11 +140,13 @@ const CASE_STUDIES = [
       en: "An all-in-one study space, born from my own needs as a student."
     },
     kind: { fr: "Application web", en: "Web app" },
-    year: "[[année]]",
+    year: "2026",
     status: { fr: "En ligne · usage personnel", en: "Live · personal use" },
     meta: [
       { label: { fr: "Rôle", en: "Role" },
-        value: { fr: "Conception et développement, seul [[à confirmer]]", en: "Design and development, solo [[to confirm]]" } }
+        value: { fr: "Conception et développement, seul [[à confirmer]]", en: "Design and development, solo [[to confirm]]" } },
+      { label: { fr: "Cadre", en: "Scope" },
+        value: { fr: "Projet personnel · budget 0 € (outils gratuits)", en: "Personal project · €0 budget (free tools)" } }
     ],
     links: [
       { label: { fr: "Ouvrir l’app", en: "Open the app" }, url: "https://studyspace-eight.vercel.app" }
@@ -192,11 +194,13 @@ const CASE_STUDIES = [
       en: "Turn every workout into a leg of the journey to Mordor."
     },
     kind: { fr: "Application web", en: "Web app" },
-    year: "[[année]]",
+    year: "2026",
     status: { fr: "Prototype en cours", en: "Work in progress" },
     meta: [
       { label: { fr: "Rôle", en: "Role" },
         value: { fr: "Conception et développement, seul [[à confirmer]]", en: "Design and development, solo [[to confirm]]" } },
+      { label: { fr: "Cadre", en: "Scope" },
+        value: { fr: "Projet personnel · budget 0 € (outils gratuits)", en: "Personal project · €0 budget (free tools)" } },
       { label: { fr: "Note", en: "Note" },
         value: { fr: "Projet de fan, non officiel", en: "Unofficial fan project" } }
     ],

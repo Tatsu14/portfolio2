@@ -1,128 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maxime Cavallari · Product designer</title>
-  <meta name="description" content="Portfolio de Maxime Cavallari, étudiant en product design : des applications conçues et développées avec l’IA comme outil de travail. À la recherche d’un stage.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maxime Cavallari · Product designer</title>
+    <meta
+      name="description"
+      content="Portfolio de Maxime Cavallari, étudiant en product design : des applications conçues et développées avec l’IA comme outil de travail. À la recherche d’un stage."
+    />
 
-  <!-- Aperçu quand le lien est partagé (LinkedIn, WhatsApp, e-mail…) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Maxime Cavallari · Product designer">
-  <meta property="og:description" content="Des applications conçues et développées avec l’IA comme outil de travail. À la recherche d’un stage en product design.">
-  <meta property="og:locale" content="fr_BE">
-  <meta property="og:locale:alternate" content="en_GB">
-  <!-- À ajouter une fois le site en ligne : <meta property="og:image" content="https://…/images/apercu-partage.png"> -->
-  <meta name="twitter:card" content="summary_large_image">
+    <!-- Aperçu quand le lien est partagé (LinkedIn, WhatsApp, e-mail…) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Maxime Cavallari · Product designer" />
+    <meta
+      property="og:description"
+      content="Des applications conçues et développées avec l’IA comme outil de travail. À la recherche d’un stage en product design."
+    />
+    <meta property="og:locale" content="fr_BE" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <!-- À ajouter une fois le site en ligne : <meta property="og:image" content="https://…/images/apercu-partage.png"> -->
+    <meta name="twitter:card" content="summary_large_image" />
 
-  <meta name="color-scheme" content="dark light">
-  <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="theme-color"
+      content="#0b0b0c"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="theme-color"
+      content="#fafaf9"
+      media="(prefers-color-scheme: light)"
+    />
 
-  <!-- Applique le thème mémorisé avant l'affichage (évite un flash de couleur) -->
-  <script>
-    try { var th = localStorage.getItem("theme"); if (th === "dark" || th === "light") document.documentElement.setAttribute("data-theme", th); } catch (e) {}
-    document.documentElement.classList.add("js");
-  </script>
+    <!-- Applique le thème mémorisé avant l'affichage (évite un flash de couleur) -->
+    <script>
+      try {
+        var th = localStorage.getItem("theme");
+        if (th === "dark" || th === "light")
+          document.documentElement.setAttribute("data-theme", th);
+      } catch (e) {}
+      document.documentElement.classList.add("js");
+    </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
 
-  <div id="draft-banner" class="draft-banner" role="note" hidden>
-    <span data-i18n="draft_banner"></span>
-  </div>
-
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="brand" href="index.html" data-site-name>Maxime Cavallari</a>
-      <nav class="site-nav" aria-label="Navigation principale">
-        <a href="#cas" data-i18n="nav_cases">Études de cas</a>
-        <a href="#methode" data-i18n="nav_method">Méthode</a>
-        <a href="#autres" data-i18n="nav_other">Autres créations</a>
-      </nav>
-      <div class="site-header__actions">
-        <button id="lang-toggle" class="icon-btn icon-btn--text" type="button">EN</button>
-        <button id="theme-toggle" class="icon-btn" type="button" aria-label="Changer de thème">
-          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-        </button>
-        <a class="btn btn--small" href="#contact" data-i18n="nav_contact">Contact</a>
-      </div>
+    <div id="draft-banner" class="draft-banner" role="note" hidden>
+      <span data-i18n="draft_banner"></span>
     </div>
-  </header>
 
-  <main id="main">
-    <!-- ACCROCHE -->
-    <section class="hero container">
-      <p class="eyebrow reveal" data-i18n="hero_eyebrow"></p>
-      <h1 class="hero__title reveal" data-i18n="hero_title"></h1>
-      <p class="hero__lead reveal" data-i18n="hero_lead"></p>
-      <div class="hero__actions reveal">
-        <a class="btn" href="#cas" data-i18n="hero_cta_cases"></a>
-        <a class="btn btn--ghost" href="#contact" data-i18n="hero_cta_contact"></a>
-      </div>
-    </section>
-
-    <!-- ÉTUDES DE CAS -->
-    <section id="cas" class="section container" aria-labelledby="cas-title">
-      <div class="section__head">
-        <h2 id="cas-title" class="section__title" data-i18n="cases_title"></h2>
-        <p class="section__intro" data-i18n="cases_intro"></p>
-      </div>
-      <ol id="cases-list" class="cases-list"></ol>
-    </section>
-
-    <!-- MÉTHODE -->
-    <section id="methode" class="section section--alt" aria-labelledby="methode-title">
-      <div class="container">
-        <div class="section__head">
-          <h2 id="methode-title" class="section__title" data-i18n="method_title"></h2>
-          <p class="section__intro" data-i18n="method_intro"></p>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html" data-site-name>Maxime Cavallari</a>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a href="#cas" data-i18n="nav_cases">Études de cas</a>
+          <a href="#methode" data-i18n="nav_method">Méthode</a>
+          <a href="#autres" data-i18n="nav_other">Autres créations</a>
+        </nav>
+        <div class="site-header__actions">
+          <button
+            id="lang-toggle"
+            class="icon-btn icon-btn--text"
+            type="button"
+          >
+            EN
+          </button>
+          <button
+            id="theme-toggle"
+            class="icon-btn"
+            type="button"
+            aria-label="Changer de thème"
+          >
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="4.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+              <path
+                d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <path
+                d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <a class="btn btn--small" href="#contact" data-i18n="nav_contact"
+            >Contact</a
+          >
         </div>
-        <ol class="method-list">
-          <li class="method-step reveal"><span class="method-step__num" aria-hidden="true">01</span><h3 data-i18n="method_1_t"></h3><p data-i18n="method_1_p"></p></li>
-          <li class="method-step reveal"><span class="method-step__num" aria-hidden="true">02</span><h3 data-i18n="method_2_t"></h3><p data-i18n="method_2_p"></p></li>
-          <li class="method-step reveal"><span class="method-step__num" aria-hidden="true">03</span><h3 data-i18n="method_3_t"></h3><p data-i18n="method_3_p"></p></li>
-          <li class="method-step reveal"><span class="method-step__num" aria-hidden="true">04</span><h3 data-i18n="method_4_t"></h3><p data-i18n="method_4_p"></p></li>
-        </ol>
       </div>
-    </section>
+    </header>
 
-    <!-- AUTRES CRÉATIONS -->
-    <section id="autres" class="section container" aria-labelledby="autres-title">
-      <div class="section__head">
-        <h2 id="autres-title" class="section__title" data-i18n="other_title"></h2>
-        <p class="section__intro" data-i18n="other_intro"></p>
+    <main id="main">
+      <!-- ACCROCHE -->
+      <section class="hero container">
+        <p class="eyebrow reveal" data-i18n="hero_eyebrow"></p>
+        <h1 class="hero__title reveal" data-i18n="hero_title"></h1>
+        <p class="hero__lead reveal" data-i18n="hero_lead"></p>
+        <div class="hero__actions reveal">
+          <a class="btn" href="#cas" data-i18n="hero_cta_cases"></a>
+          <a
+            class="btn btn--ghost"
+            href="#contact"
+            data-i18n="hero_cta_contact"
+          ></a>
+        </div>
+      </section>
+
+      <!-- ÉTUDES DE CAS -->
+      <section id="cas" class="section container" aria-labelledby="cas-title">
+        <div class="section__head">
+          <h2
+            id="cas-title"
+            class="section__title"
+            data-i18n="cases_title"
+          ></h2>
+          <p class="section__intro" data-i18n="cases_intro"></p>
+        </div>
+        <ol id="cases-list" class="cases-list"></ol>
+      </section>
+
+      <!-- MÉTHODE -->
+      <section
+        id="methode"
+        class="section section--alt"
+        aria-labelledby="methode-title"
+      >
+        <div class="container">
+          <div class="section__head">
+            <h2
+              id="methode-title"
+              class="section__title"
+              data-i18n="method_title"
+            ></h2>
+            <p class="section__intro" data-i18n="method_intro"></p>
+          </div>
+          <ol class="method-list">
+            <li class="method-step reveal">
+              <span class="method-step__num" aria-hidden="true">01</span>
+              <h3 data-i18n="method_1_t"></h3>
+              <p data-i18n="method_1_p"></p>
+            </li>
+            <li class="method-step reveal">
+              <span class="method-step__num" aria-hidden="true">02</span>
+              <h3 data-i18n="method_2_t"></h3>
+              <p data-i18n="method_2_p"></p>
+            </li>
+            <li class="method-step reveal">
+              <span class="method-step__num" aria-hidden="true">03</span>
+              <h3 data-i18n="method_3_t"></h3>
+              <p data-i18n="method_3_p"></p>
+            </li>
+            <li class="method-step reveal">
+              <span class="method-step__num" aria-hidden="true">04</span>
+              <h3 data-i18n="method_4_t"></h3>
+              <p data-i18n="method_4_p"></p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- AUTRES CRÉATIONS -->
+      <section
+        id="autres"
+        class="section container"
+        aria-labelledby="autres-title"
+      >
+        <div class="section__head">
+          <h2
+            id="autres-title"
+            class="section__title"
+            data-i18n="other_title"
+          ></h2>
+          <p class="section__intro" data-i18n="other_intro"></p>
+        </div>
+        <ul id="other-list" class="works-grid"></ul>
+      </section>
+
+      <!-- À PROPOS + CONTACT -->
+      <section
+        id="contact"
+        class="section contact container"
+        aria-labelledby="contact-title"
+      >
+        <div class="contact__about reveal">
+          <h2 class="section__title" data-i18n="about_title"></h2>
+          <p data-i18n="about_text"></p>
+        </div>
+        <div class="contact__cta reveal">
+          <p
+            id="contact-title"
+            class="contact__title"
+            data-i18n="contact_title"
+          ></p>
+          <p class="contact__lead" data-i18n="contact_lead"></p>
+          <a
+            id="contact-email"
+            class="contact__email"
+            href="mailto:maximecav4@gmail.com"
+            >maximecav4@gmail.com</a
+          >
+          <ul id="contact-links" class="contact__links"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span data-year>2026</span>
+        <span data-site-name>Maxime Cavallari</span>.
+        <span data-i18n="footer"></span>
       </div>
-      <ul id="other-list" class="works-grid"></ul>
-    </section>
+    </footer>
 
-    <!-- À PROPOS + CONTACT -->
-    <section id="contact" class="section contact container" aria-labelledby="contact-title">
-      <div class="contact__about reveal">
-        <h2 class="section__title" data-i18n="about_title"></h2>
-        <p data-i18n="about_text"></p>
-      </div>
-      <div class="contact__cta reveal">
-        <p id="contact-title" class="contact__title" data-i18n="contact_title"></p>
-        <p class="contact__lead" data-i18n="contact_lead"></p>
-        <a id="contact-email" class="contact__email" href="mailto:maximecav4@gmail.com">maximecav4@gmail.com</a>
-        <ul id="contact-links" class="contact__links"></ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">© <span data-year>2026</span> <span data-site-name>Maxime Cavallari</span>. <span data-i18n="footer"></span></div>
-  </footer>
-
-  <script src="js/data.js"></script>
-  <script src="js/site.js"></script>
-  <script src="js/main.js"></script>
-</body>
+    <script src="js/data.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
