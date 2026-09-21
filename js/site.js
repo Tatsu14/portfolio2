@@ -44,7 +44,7 @@ const UI = {
     other_intro: "Écriture, image, médias : ce qui nourrit ma façon de concevoir.",
 
     about_title: "À propos",
-    about_text: "Étudiant en 2e année à la HEPL, je touche à tout ce qui fait un produit : l’écriture, l’image, la vidéo et le code. [[à valider : mentionner l’agence que je co-fonde ?]]",
+    about_text: "Étudiant en 2e année à la HEPL, je touche à tout ce qui fait un produit : l’écriture, l’image, la vidéo et le code. Je prépare Adhara, mon studio de product design.",
     contact_title: "Écrivons la suite.",
     contact_lead: "Le plus simple pour me joindre : un e-mail.",
 
@@ -98,7 +98,7 @@ const UI = {
     other_intro: "Writing, images, media: what feeds the way I design.",
 
     about_title: "About",
-    about_text: "A 2nd-year student at HEPL, I work across everything that makes a product: writing, images, video and code. [[to approve: mention the agency I co-founded?]]",
+    about_text: "A 2nd-year student at HEPL, I work across everything that makes a product: writing, images, video and code. I’m building Adhara, my product design studio.",
     contact_title: "Let’s write what comes next.",
     contact_lead: "The easiest way to reach me: an email.",
 

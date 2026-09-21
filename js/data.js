@@ -15,7 +15,7 @@ const SITE = {
   email: "maximecav4@gmail.com",
   links: [
     { label: "GitHub", url: "https://github.com/Tatsu14" },
-    { label: "LinkedIn", url: null },   // [[ajouter l'URL LinkedIn]]
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/maxime-cavallari-adhara" },
     { label: "Instagram", url: null }   // [[compte artiste, quand il sera prêt]]
   ]
 };
@@ -91,16 +91,18 @@ const CASE_STUDIES = [
       },
       {
         title: { fr: "L’IA dans le projet", en: "AI in the project" },
+        paragraphs: [{
+          fr: "Proserpine est le projet où l’IA est le moins intervenue : elle a écrit le code que je lui demandais, rien de plus. Les idées viennent de moi, ou d’exemples repérés en ligne. Sur mes autres applications, elle intervient aussi en amont, dans la conception.",
+          en: "Proserpine is the project where AI played the smallest part: it wrote the code I asked for, nothing else. The ideas are mine, or come from examples I found online. On my other apps, it also takes part earlier, in the design work."
+        }],
         ai: {
           did: [
-            { fr: "[[ex. m’aider à structurer le brief produit (méthode WDS ?)]]", en: "[[e.g. helped structure the product brief (WDS method?)]]" },
-            { fr: "[[ex. générer une partie du code dans Antigravity]]", en: "[[e.g. generated part of the code in Antigravity]]" },
-            { fr: "[[à compléter]]", en: "[[to complete]]" }
+            { fr: "Écrire le code de la V1, à partir de mes instructions", en: "Write the code of the V1, from my instructions" }
           ],
           decided: [
-            { fr: "Le problème de départ et la cible [[à confirmer]]", en: "The starting problem and the target users [[to confirm]]" },
-            { fr: "Les hypothèses à vérifier et les questions d’entretien [[à confirmer]]", en: "The hypotheses to test and the interview questions [[to confirm]]" },
-            { fr: "[[à compléter]]", en: "[[to complete]]" }
+            { fr: "Le problème, la cible et le ton", en: "The problem, the audience and the tone" },
+            { fr: "Les hypothèses à vérifier et les questions d’entretien", en: "The hypotheses to test and the interview questions" },
+            { fr: "Les fonctionnalités et les partis pris de conception", en: "The features and the design choices" }
           ]
         }
       },
