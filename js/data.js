@@ -38,13 +38,13 @@ const CASE_STUDIES = [
       { label: { fr: "Rôle", en: "Role" },
         value: { fr: "Recherche, conception et développement, seul", en: "Research, design and development, solo" } },
       { label: { fr: "Cadre", en: "Scope" },
-        value: { fr: "Moins de 2 mois · budget 0 € · [[projet perso ou de cours ?]]", en: "Under 2 months · €0 budget · [[personal or school project?]]" } },
+        value: { fr: "Projet de cours [[lequel ?]] · moins de 2 mois · budget 0 €", en: "School project [[which course?]] · under 2 months · €0 budget" } },
       { label: { fr: "Technique", en: "Stack" },
         value: { fr: "Vite · JavaScript · PWA", en: "Vite · JavaScript · PWA" } }
     ],
     links: [
       { label: { fr: "Ouvrir l’app", en: "Open the app" }, url: "https://proserpine-design.vercel.app" },
-      { label: { fr: "Code source [[dépôt public ?]]", en: "Source code [[public repo?]]" }, url: "https://github.com/Tatsu14/proserpine" }
+      { label: { fr: "Code source", en: "Source code" }, url: "https://github.com/Tatsu14/proserpine" }
     ],
     cover: "images/proserpine-couverture.jpg",
     sections: [
@@ -83,12 +83,10 @@ const CASE_STUDIES = [
             text: { fr: "Scanner le code-barres suffit pour obtenir la consigne de tri : aucune recherche à faire.", en: "Scanning the barcode is enough to get the sorting instruction: no searching required." } },
           { title: { fr: "Zéro leçon de morale", en: "No lecturing" },
             text: { fr: "Pas de « éco » dans le nom, pas de culpabilisation : un ton direct, ludique et encourageant.", en: "No “eco” in the name, no guilt-tripping: a direct, playful, encouraging tone." } },
-          { title: { fr: "Proposer plutôt que juger", en: "Suggest, don’t judge" },
-            text: { fr: "Quand un produit est mal emballé, l’app suggère une alternative mieux conçue. [[présent dans la V1 ?]]", en: "When a product is poorly packaged, the app suggests a better-designed alternative. [[in V1?]]" } },
           { title: { fr: "Un créneau libre", en: "An open niche" },
             text: { fr: "Yuka parle santé, Greenly parle carbone : Proserpine se concentre sur la fin de vie de l’emballage.", en: "Yuka covers health, Greenly covers carbon: Proserpine focuses on the packaging’s end of life." } },
           { title: { fr: "Installable sans store", en: "Installable, no store" },
-            text: { fr: "Une application web installable sur téléphone (PWA). [[pourquoi ce choix ?]]", en: "A web app you can install on your phone (PWA). [[why this choice?]]" } }
+            text: { fr: "Une application web installable sur téléphone (PWA) : le web est ce que je maîtrise le mieux, et c’était le seul format tenable en moins de deux mois. Une version native viendra plus tard.", en: "A web app you can install on your phone (PWA): the web is what I know best, and it was the only format that fit in under two months. A native version will come later." } }
         ]
       },
       {
@@ -127,8 +125,8 @@ const CASE_STUDIES = [
         list: [
           { fr: "Une saisie manuelle quand le code-barres n’est pas reconnu", en: "Manual entry when the barcode isn’t recognised" },
           { fr: "Un guide de tri consultable à tout moment", en: "A sorting guide available at any time" },
-          { fr: "Des alternatives suggérées automatiquement", en: "Automatically suggested alternatives" },
-          { fr: "Mesurer l’impact : poids trié, CO₂ évité [[toujours d’actualité ?]]", en: "Measuring impact: weight sorted, CO₂ avoided [[still planned?]]" }
+          { fr: "Mesurer l’impact : poids trié, CO₂ évité [[toujours d’actualité ?]]", en: "Measuring impact: weight sorted, CO₂ avoided [[still planned?]]" },
+          { fr: "Une version native, une fois la V1 web stabilisée", en: "A native version, once the web V1 is stable" }
         ]
       }
     ]
