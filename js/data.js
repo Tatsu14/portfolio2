@@ -127,7 +127,8 @@ const CASE_STUDIES = [
         list: [
           { fr: "Une saisie manuelle quand le code-barres n’est pas reconnu", en: "Manual entry when the barcode isn’t recognised" },
           { fr: "Un guide de tri consultable à tout moment", en: "A sorting guide available at any time" },
-          { fr: "Mesurer l’impact : poids trié, CO₂ évité [[toujours d’actualité ?]]", en: "Measuring impact: weight sorted, CO₂ avoided [[still planned?]]" },
+          { fr: "Rendre l’algorithme d’éco-score vraiment intelligent : déduire les informations qui manquent dans les bases publiques plutôt que de s’arrêter à ce qui y est écrit", en: "Make the eco-score algorithm genuinely smart: infer the information missing from public databases instead of stopping at what they state" },
+          { fr: "Constituer mes propres bases de données de produits", en: "Build my own product databases" },
           { fr: "Une version native, une fois la V1 web stabilisée", en: "A native version, once the web V1 is stable" }
         ]
       }
@@ -146,9 +147,9 @@ const CASE_STUDIES = [
     status: { fr: "En ligne · usage personnel", en: "Live · personal use" },
     meta: [
       { label: { fr: "Rôle", en: "Role" },
-        value: { fr: "Conception et développement, seul [[à confirmer]]", en: "Design and development, solo [[to confirm]]" } },
+        value: { fr: "Conception et développement, seul (avec l’IA en appui)", en: "Design and development, solo (with AI support)" } },
       { label: { fr: "Cadre", en: "Scope" },
-        value: { fr: "Projet personnel · budget 0 € (outils gratuits)", en: "Personal project · €0 budget (free tools)" } }
+        value: { fr: "Petit projet personnel · budget 0 € (outils gratuits)", en: "Small personal project · €0 budget (free tools)" } }
     ],
     links: [
       { label: { fr: "Ouvrir l’app", en: "Open the app" }, url: "https://studyspace-eight.vercel.app" }
@@ -200,9 +201,9 @@ const CASE_STUDIES = [
     status: { fr: "Prototype en cours", en: "Work in progress" },
     meta: [
       { label: { fr: "Rôle", en: "Role" },
-        value: { fr: "Conception et développement, seul [[à confirmer]]", en: "Design and development, solo [[to confirm]]" } },
+        value: { fr: "Conception et développement, seul (avec l’IA en appui)", en: "Design and development, solo (with AI support)" } },
       { label: { fr: "Cadre", en: "Scope" },
-        value: { fr: "Projet personnel · budget 0 € (outils gratuits)", en: "Personal project · €0 budget (free tools)" } },
+        value: { fr: "Petit projet personnel · budget 0 € (outils gratuits)", en: "Small personal project · €0 budget (free tools)" } },
       { label: { fr: "Note", en: "Note" },
         value: { fr: "Projet de fan, non officiel", en: "Unofficial fan project" } }
     ],
@@ -237,9 +238,16 @@ const CASE_STUDIES = [
       {
         title: { fr: "État et suite", en: "Status and next steps" },
         paragraphs: [{
-          fr: "C’est un prototype : le strict minimum fonctionne, et de grosses améliorations sont prévues. [[lesquelles ?]]",
-          en: "It’s a prototype: the bare minimum works, and major improvements are planned. [[which ones?]]"
-        }]
+          fr: "C’est un prototype : le strict minimum fonctionne. Un petit projet personnel, bien moins poussé que Proserpine, mais que je compte reprendre en profondeur.",
+          en: "It’s a prototype: the bare minimum works. A small personal project, far less developed than Proserpine, but one I intend to rework in depth."
+        }],
+        list: [
+          { fr: "Refonte visuelle : interface et images", en: "Visual overhaul: interface and imagery" },
+          { fr: "Fiabiliser le suivi GPS : quand l’app passe en arrière-plan, la progression s’actualise de façon irrégulière", en: "Make GPS tracking reliable: when the app goes to the background, progress updates erratically" },
+          { fr: "Améliorer le mode en salle : correct sur tapis de course, pas encore adapté au vélo (vitesse variable, plafonnée à 20 km/h)", en: "Improve indoor mode: fine on a treadmill, not yet suited to cycling (variable speed, capped at 20 km/h)" },
+          { fr: "Une vraie application native", en: "A real native app" },
+          { fr: "Une fois la version Seigneur des anneaux aboutie, étendre à d’autres univers : Game of Thrones, The Witcher, Clair Obscur…", en: "Once the Lord of the Rings version is right, extend to other worlds: Game of Thrones, The Witcher, Clair Obscur…" }
+        ]
       }
     ]
   }
