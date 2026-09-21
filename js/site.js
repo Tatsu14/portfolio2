@@ -20,7 +20,7 @@ const UI = {
 
     hero_eyebrow: "Product design · Étudiant en 2e année à la HEPL (Liège)",
     hero_title: "Je conçois des produits utiles, avec l’IA comme outil de travail.",
-    hero_lead: "Je pars d’un vrai problème, je vérifie qu’il existe, puis je conçois et je développe l’application. L’IA m’accompagne à chaque étape ; les décisions restent les miennes. Je cherche un stage en product design.",
+    hero_lead: "Je pars d’un vrai problème, je vérifie qu’il existe, puis je conçois et je développe l’application. L’IA m’accompagne à chaque étape ; les décisions restent les miennes.",
     hero_cta_cases: "Voir les études de cas",
     hero_cta_contact: "Me contacter",
 
@@ -46,7 +46,7 @@ const UI = {
     about_title: "À propos",
     about_text: "Étudiant en 2e année à la HEPL, je touche à tout ce qui fait un produit : l’écriture, l’image, la vidéo et le code. [[à valider : mentionner l’agence que je co-fonde ?]]",
     contact_title: "Écrivons la suite.",
-    contact_lead: "Je cherche un stage en product design. Le plus simple : un e-mail.",
+    contact_lead: "Le plus simple pour me joindre : un e-mail.",
 
     footer: "Tous droits réservés.",
 
@@ -74,7 +74,7 @@ const UI = {
 
     hero_eyebrow: "Product design · 2nd-year student at HEPL (Liège, Belgium)",
     hero_title: "I design useful products, with AI as my working tool.",
-    hero_lead: "I start from a real problem, check that it exists, then design and build the app. AI supports me at every step; the decisions stay mine. I’m looking for a product design internship.",
+    hero_lead: "I start from a real problem, check that it exists, then design and build the app. AI supports me at every step; the decisions stay mine.",
     hero_cta_cases: "See the case studies",
     hero_cta_contact: "Get in touch",
 
@@ -100,7 +100,7 @@ const UI = {
     about_title: "About",
     about_text: "A 2nd-year student at HEPL, I work across everything that makes a product: writing, images, video and code. [[to approve: mention the agency I co-founded?]]",
     contact_title: "Let’s write what comes next.",
-    contact_lead: "I’m looking for a product design internship. Easiest way: an email.",
+    contact_lead: "The easiest way to reach me: an email.",
 
     footer: "All rights reserved.",
 
