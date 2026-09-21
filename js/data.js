@@ -46,7 +46,7 @@ const CASE_STUDIES = [
       { label: { fr: "Ouvrir l’app", en: "Open the app" }, url: "https://proserpine-design.vercel.app" },
       { label: { fr: "Code source [[dépôt public ?]]", en: "Source code [[public repo?]]" }, url: "https://github.com/Tatsu14/proserpine" }
     ],
-    cover: null, // ex. "images/proserpine-couverture.png"
+    cover: "images/proserpine-couverture.jpg",
     sections: [
       {
         title: { fr: "Contexte", en: "Context" },
@@ -109,9 +109,18 @@ const CASE_STUDIES = [
       {
         title: { fr: "Résultat", en: "Outcome" },
         paragraphs: [{
-          fr: "Une V1 fonctionnelle, installable sur téléphone. L’interface et l’algorithme de score sont encore imparfaits : c’est une première version assumée, à améliorer.",
-          en: "A working V1 you can install on your phone. The interface and the scoring algorithm are still rough: a deliberate first version, to be improved."
-        }]
+          fr: "Une V1 fonctionnelle, installable sur téléphone. Chaque produit scanné reçoit un score sur 100 et des consignes de tri par matériau (sac bleu PMC, papiers et cartons), avec un guide et l’historique des produits scannés.",
+          en: "A working V1 you can install on your phone. Every scanned product gets a score out of 100 and sorting instructions per material (blue PMC bag, paper and cardboard), plus a guide and a history of scanned products."
+        }, {
+          fr: "L’interface et l’algorithme de score sont encore imparfaits : c’est une première version assumée, à améliorer.",
+          en: "The interface and the scoring algorithm are still rough: a deliberate first version, to be improved."
+        }],
+        shots: [
+          { src: "images/proserpine-accueil.jpg",
+            caption: { fr: "Accueil : produits les plus scannés et meilleurs scores", en: "Home: most-scanned products and best scores" } },
+          { src: "images/proserpine-resultat.jpg",
+            caption: { fr: "Après un scan : score, analyse et consignes de tri", en: "After a scan: score, analysis and sorting instructions" } }
+        ]
       },
       {
         title: { fr: "La suite", en: "What’s next" },
@@ -142,7 +151,7 @@ const CASE_STUDIES = [
     links: [
       { label: { fr: "Ouvrir l’app", en: "Open the app" }, url: "https://studyspace-eight.vercel.app" }
     ],
-    cover: null,
+    cover: "images/studyspace-couverture.jpg",
     sections: [
       {
         title: { fr: "Origine", en: "Origin" },
@@ -154,11 +163,17 @@ const CASE_STUDIES = [
       {
         title: { fr: "Ce que fait l’app", en: "What the app does" },
         list: [
-          { fr: "Matières et fiches de cours", en: "Subjects and study cards" },
-          { fr: "Quiz pour s’entraîner", en: "Quizzes to practise" },
+          { fr: "Matières, chapitres et fiches de cours", en: "Subjects, chapters and study cards" },
+          { fr: "Quiz de rappel actif : la question s’affiche, on essaie de se souvenir avant de révéler la réponse", en: "Active-recall quiz: the question appears, you try to remember before revealing the answer" },
           { fr: "Une base d’œuvres et une section questions / réponses", en: "A library of works and a Q&A section" },
           { fr: "Tags et recherche", en: "Tags and search" },
           { fr: "Export et import des données", en: "Data export and import" }
+        ],
+        shots: [
+          { src: "images/studyspace-accueil.jpg",
+            caption: { fr: "Les matières, avec leurs chapitres et leurs notes", en: "Subjects, with their chapters and notes" } },
+          { src: "images/studyspace-quiz.jpg",
+            caption: { fr: "Le quiz de rappel actif", en: "The active-recall quiz" } }
         ]
       },
       {
@@ -190,7 +205,7 @@ const CASE_STUDIES = [
     links: [
       { label: { fr: "Ouvrir l’app", en: "Open the app" }, url: "https://lotr-walking.vercel.app" }
     ],
-    cover: null,
+    cover: "images/mordor-couverture.jpg",
     sections: [
       {
         title: { fr: "Origine", en: "Origin" },
@@ -207,6 +222,12 @@ const CASE_STUDIES = [
           { fr: "Mode intérieur avec allure réglable", en: "Indoor mode with adjustable pace" },
           { fr: "Fonctionne hors ligne", en: "Works offline" },
           { fr: "Hauts faits : distance de la semaine, meilleures sorties", en: "Achievements: weekly distance, best outings" }
+        ],
+        shots: [
+          { src: "images/mordor-voyage.jpg",
+            caption: { fr: "Le voyage : distance parcourue, étape en cours et prochaine étape", en: "The journey: distance covered, current stage and next stage" } },
+          { src: "images/mordor-hauts-faits.jpg",
+            caption: { fr: "Les hauts faits et le rouleau des étapes", en: "Achievements and the roll of stages" } }
         ]
       },
       {
@@ -234,7 +255,7 @@ const OTHER_WORKS = [
       en: "A screenplay written in my first year, extended with a website I coded almost entirely on my own, a poster and character sheets."
     },
     link: { label: { fr: "Voir le site", en: "Visit the site" }, url: "https://initiale-vermeille.vercel.app" },
-    cover: null
+    cover: "images/vermeille-affiche.jpg"
   },
   {
     id: "chimera",

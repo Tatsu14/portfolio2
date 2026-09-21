@@ -42,6 +42,12 @@ function renderOtherWorks() {
   if (!list) return;
   list.innerHTML = OTHER_WORKS.map(w => `
     <li class="work-card reveal">
+      ${w.cover
+        ? `<img class="work-card__cover" src="${w.cover}" alt="${fmt(plain(tr(w.title)))}" loading="lazy">`
+        : `<div class="work-card__cover cover--placeholder" aria-hidden="true">
+             <span class="cover__initial">${fmt(plain(tr(w.title)).charAt(0))}</span>
+             <span class="cover__note">${t("cover_placeholder")}</span>
+           </div>`}
       <p class="work-card__cat">${fmt(tr(w.category))} · ${fmt(tr(w.year))}</p>
       <h3 class="work-card__title">${fmt(tr(w.title))}</h3>
       <p class="work-card__text">${fmt(tr(w.text))}</p>

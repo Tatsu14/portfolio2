@@ -401,6 +401,16 @@ mark.todo {
   background: var(--surface);
   box-shadow: var(--shadow);
 }
+.work-card__cover {
+  width: calc(100% + 52px);
+  margin: -26px -26px 4px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 34%;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+.work-card__cover.cover--placeholder { display: grid; place-items: center; }
+.work-card__cover .cover__initial { font-size: clamp(4rem, 9vw, 6rem); }
 .work-card__cat { color: var(--muted); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
 .work-card__title { font-size: 1.35rem; font-weight: 700; }
 .work-card__text { color: var(--muted); font-size: 0.975rem; }
@@ -464,7 +474,27 @@ mark.todo {
 .cs-meta dd { margin-top: 4px; font-weight: 500; }
 .cs-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
-.cs-cover { border-radius: var(--radius); border: 1px solid var(--border); aspect-ratio: 16 / 8; }
+.cs-cover { border-radius: var(--radius); border: 1px solid var(--border); aspect-ratio: 16 / 10; }
+
+/* Captures d'écran commentées */
+.shots {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-top: 24px;
+}
+.shot img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+}
+.shot figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
 
 .cs-body { padding-block: clamp(40px, 7vw, 88px); }
 .cs-section {

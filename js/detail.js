@@ -28,6 +28,13 @@ function sectionHTML(section, index) {
         <p>${fmt(tr(it.text))}</p>
       </li>`).join("")}</ul>`;
   }
+  if (section.shots) {
+    body += `<div class="shots">${section.shots.map(s => `
+      <figure class="shot">
+        <img src="${s.src}" alt="${fmt(plain(tr(s.caption)))}" loading="lazy">
+        <figcaption>${fmt(tr(s.caption))}</figcaption>
+      </figure>`).join("")}</div>`;
+  }
   if (section.ai) {
     body += `<div class="ai-split">
       <div class="ai-split__col">

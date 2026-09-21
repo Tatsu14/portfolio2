@@ -32,7 +32,7 @@ images/               Captures et visuels
 
 ## Reste à faire avant les candidatures
 
-- [ ] Captures des projets (voir la liste dans la conversation avec Claude)
+- [ ] Capture du site de L’Initiale Vermeille, visuel Chimera, aperçu Prisme Trinity
 - [ ] URL LinkedIn, lien Instagram artiste, lien Prisme Trinity
 - [ ] Vérifier que le dépôt GitHub de Proserpine est public
 - [ ] Compléter et valider tous les passages `[[ ]]`
