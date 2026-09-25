@@ -57,6 +57,17 @@ function renderOtherWorks() {
     </li>`).join("");
 }
 
+function renderCv() {
+  const wrap = document.getElementById("cv-download");
+  if (!wrap) return;
+  const cv = SITE.cv || {};
+  if (!cv.url) { wrap.hidden = true; return; }
+  wrap.hidden = false;
+  const link = document.getElementById("cv-link");
+  link.href = cv.url;
+  document.getElementById("cv-label").innerHTML = fmt(tr(cv.label));
+}
+
 function renderContact() {
   const mail = document.getElementById("contact-email");
   if (mail) {
@@ -76,5 +87,6 @@ onRender(() => {
   renderCaseStudies();
   renderOtherWorks();
   renderContact();
+  renderCv();
   revealOnScroll();
 });

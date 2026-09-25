@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mes autres travaux · Maxime Cavallari</title>
+    <meta
+      name="description"
+      content="Affiches, direction artistique et visuels : les autres travaux de Maxime Cavallari."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mes autres travaux · Maxime Cavallari" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="theme-color"
+      content="#0b0b0c"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="theme-color"
+      content="#fafaf9"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <script>
+      try {
+        var th = localStorage.getItem("theme");
+        if (th === "dark" || th === "light")
+          document.documentElement.setAttribute("data-theme", th);
+      } catch (e) {}
+      document.documentElement.classList.add("js");
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Aller au contenu</a>
+
+    <div id="draft-banner" class="draft-banner" role="note" hidden>
+      <span data-i18n="draft_banner"></span>
+    </div>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html" data-site-name>Maxime Cavallari</a>
+        <a class="back-link" href="index.html"
+          ><span aria-hidden="true">←</span>
+          <span data-i18n="back_home">Retour à l’accueil</span></a
+        >
+        <div class="site-header__actions">
+          <button id="lang-toggle" class="icon-btn icon-btn--text" type="button">
+            EN
+          </button>
+          <button
+            id="theme-toggle"
+            class="icon-btn"
+            type="button"
+            aria-label="Changer de thème"
+          >
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="4.5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              />
+              <path
+                d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8L6 18M18 6l1.8-1.8"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <path
+                d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <a class="btn btn--small" href="index.html#contact" data-i18n="nav_contact"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <header class="gallery-hero container">
+        <p class="eyebrow reveal" data-i18n="gallery_eyebrow"></p>
+        <h1 class="gallery-hero__title reveal" data-i18n="gallery_title"></h1>
+        <p class="gallery-hero__lead reveal" data-i18n="gallery_lead"></p>
+      </header>
+
+      <div class="container">
+        <ul id="gallery-grid" class="gallery-grid"></ul>
+      </div>
+    </main>
+
+    <!-- Agrandissement d'une image -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" hidden>
+      <div class="lightbox__panel">
+        <button class="lightbox__close icon-btn" type="button" aria-label="Fermer">
+          ✕
+        </button>
+        <button class="lightbox__prev icon-btn" type="button" aria-label="Image précédente">
+          ←
+        </button>
+        <img class="lightbox__img" src="" alt="" />
+        <button class="lightbox__next icon-btn" type="button" aria-label="Image suivante">
+          →
+        </button>
+        <figcaption class="lightbox__caption">
+          <span class="lightbox__meta"></span>
+          <span class="lightbox__title"></span>
+          <span class="lightbox__note"></span>
+        </figcaption>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span data-year>2026</span>
+        <span data-site-name>Maxime Cavallari</span>.
+        <span data-i18n="footer"></span>
+      </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/galerie.js"></script>
+  </body>
+</html>

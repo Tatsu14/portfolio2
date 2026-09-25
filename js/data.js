@@ -17,7 +17,14 @@ const SITE = {
     { label: "GitHub", url: "https://github.com/Tatsu14" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/maxime-cavallari-adhara" },
     { label: "Instagram", url: null }   // [[compte artiste, quand il sera prêt]]
-  ]
+  ],
+
+  // CV : déposer le PDF dans le dossier « cv », puis écrire son nom ci-dessous.
+  // Tant que url vaut null, le bouton ne s'affiche pas.
+  cv: {
+    url: null,   // ex. "cv/CV-Maxime-Cavallari.pdf"
+    label: { fr: "Télécharger mon CV", en: "Download my CV" }
+  }
 };
 
 /* --------------------------------------------------------------------------
@@ -292,5 +299,41 @@ const OTHER_WORKS = [
     },
     link: null, // [[lien du compte]]
     cover: null
+  }
+];
+
+
+/* --------------------------------------------------------------------------
+   GALERIE « MES AUTRES TRAVAUX » (page galerie.html)
+   Déposer les images dans images/galerie/, puis ajouter une entrée ici.
+   -------------------------------------------------------------------------- */
+const GALLERY = [
+  {
+    src: "images/vermeille-affiche.jpg",
+    title: { fr: "L’Initiale Vermeille — affiche", en: "L’Initiale Vermeille — poster" },
+    category: { fr: "Affiche", en: "Poster" },
+    year: "2026",
+    note: { fr: "Composition et typographie sous Photoshop. [[préciser ce que tu as fait toi-même]]", en: "Composition and typography in Photoshop. [[state what you did yourself]]" }
+  },
+  {
+    src: "images/galerie/vermeille-alicia.jpg",
+    title: { fr: "Alicia — recherche de personnage", en: "Alicia — character research" },
+    category: { fr: "Direction artistique", en: "Art direction" },
+    year: "2026",
+    note: { fr: "Image générée avec Gemini pour fixer l’allure du personnage.", en: "Image generated with Gemini to pin down the character’s look." }
+  },
+  {
+    src: "images/galerie/vermeille-nathan.jpg",
+    title: { fr: "Nathan — recherche de personnage", en: "Nathan — character research" },
+    category: { fr: "Direction artistique", en: "Art direction" },
+    year: "2026",
+    note: { fr: "Image générée avec Gemini pour fixer l’allure du personnage.", en: "Image generated with Gemini to pin down the character’s look." }
+  },
+  {
+    src: "images/galerie/vermeille-robe.jpg",
+    title: { fr: "La robe vermeille — recherche de costume", en: "The vermilion dress — costume research" },
+    category: { fr: "Direction artistique", en: "Art direction" },
+    year: "2026",
+    note: { fr: "Déclinaison du costume qui donne son titre au film.", en: "Study of the costume that gives the film its title." }
   }
 ];

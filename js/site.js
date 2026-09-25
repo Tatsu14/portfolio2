@@ -43,6 +43,15 @@ const UI = {
     other_title: "Autres créations",
     other_intro: "Écriture, image, médias : ce qui nourrit ma façon de concevoir.",
 
+    gallery_band_title: "Mes autres travaux",
+    gallery_band_lead: "Affiches, direction artistique et visuels.",
+    gallery_band_cta: "Voir la galerie",
+    gallery_eyebrow: "Galerie",
+    gallery_title: "Mes autres travaux",
+    gallery_lead: "Affiches, recherches visuelles et images réalisées en marge de mes projets. Cliquez sur une image pour l’agrandir.",
+    gallery_open: "agrandir",
+    gallery_empty: "[[Aucune image pour l’instant : déposez vos fichiers dans images/galerie puis ajoutez-les dans js/data.js]]",
+
     about_title: "À propos",
     about_text: "Étudiant en 2e année à la HEPL, je touche à tout ce qui fait un produit : l’écriture, l’image, la vidéo et le code. Je prépare Adhara, mon studio de product design.",
     contact_title: "Écrivons la suite.",
@@ -96,6 +105,15 @@ const UI = {
 
     other_title: "Other work",
     other_intro: "Writing, images, media: what feeds the way I design.",
+
+    gallery_band_title: "My other work",
+    gallery_band_lead: "Posters, art direction and visuals.",
+    gallery_band_cta: "See the gallery",
+    gallery_eyebrow: "Gallery",
+    gallery_title: "My other work",
+    gallery_lead: "Posters, visual research and images made alongside my projects. Click an image to enlarge it.",
+    gallery_open: "enlarge",
+    gallery_empty: "[[No image yet: drop your files into images/galerie, then add them in js/data.js]]",
 
     about_title: "About",
     about_text: "A 2nd-year student at HEPL, I work across everything that makes a product: writing, images, video and code. I’m building Adhara, my product design studio.",
