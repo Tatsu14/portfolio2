@@ -321,7 +321,7 @@ const GALLERY = [
     src: "images/galerie/halloween.jpg",
     title: { fr: "Halloween", en: "Halloween" },
     category: { fr: "Photographie", en: "Photography" },
-    year: "[[année]]",
+    year: "2025",
     note: { fr: "Petite photo fun, avec un effet un peu inquiétant.", en: "A small fun photo, with a slightly eerie effect." }
   },
   {
@@ -335,7 +335,7 @@ const GALLERY = [
     src: "images/galerie/scene-rouge.jpg",
     title: { fr: "Sous la lumière rouge", en: "Under the red light" },
     category: { fr: "Photographie", en: "Photography" },
-    year: "[[année]]",
+    year: "2025",
     note: { fr: "Photo d’un couple d’amis.", en: "A photo of two friends, a couple." }
   },
   {
