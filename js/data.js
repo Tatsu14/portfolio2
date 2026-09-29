@@ -277,18 +277,6 @@ const OTHER_WORKS = [
     cover: "images/vermeille-affiche.jpg"
   },
   {
-    id: "chimera",
-    title: { fr: "Chimera", en: "Chimera" },
-    category: { fr: "Roman · Fantasy", en: "Novel · Fantasy" },
-    year: { fr: "En cours", en: "Ongoing" },
-    text: {
-      fr: "Saga de fantasy en cours d’écriture, dans le monde de Vaeloria : un univers construit en profondeur, jusqu’à la biologie de ses créatures.",
-      en: "A fantasy saga in progress, set in the world of Vaeloria: an in-depth worldbuilding, down to the biology of its creatures."
-    },
-    link: null,
-    cover: null
-  },
-  {
     id: "prisme-trinity",
     title: { fr: "Prisme Trinity", en: "Prisme Trinity" },
     category: { fr: "Média · Instagram", en: "Media · Instagram" },
@@ -309,31 +297,19 @@ const OTHER_WORKS = [
    -------------------------------------------------------------------------- */
 const GALLERY = [
   {
-    src: "images/vermeille-affiche.jpg",
-    title: { fr: "L’Initiale Vermeille — affiche", en: "L’Initiale Vermeille — poster" },
-    category: { fr: "Affiche", en: "Poster" },
-    year: "2026",
-    note: { fr: "Composition et typographie sous Photoshop. [[préciser ce que tu as fait toi-même]]", en: "Composition and typography in Photoshop. [[state what you did yourself]]" }
+    src: "images/galerie/scene-rouge.jpg",
+    title: { fr: "[[titre à donner]]", en: "[[title to give]]" },
+    category: { fr: "Photographie", en: "Photography" },
+    year: "[[année]]",
+    note: { fr: "[[à décrire : le contexte et ce que tu as fait — lumière, mise en scène, retouche]]", en: "[[to describe: context and what you did — lighting, staging, retouching]]" }
   },
   {
-    src: "images/galerie/vermeille-alicia.jpg",
-    title: { fr: "Alicia — recherche de personnage", en: "Alicia — character research" },
-    category: { fr: "Direction artistique", en: "Art direction" },
-    year: "2026",
-    note: { fr: "Image générée avec Gemini pour fixer l’allure du personnage.", en: "Image generated with Gemini to pin down the character’s look." }
-  },
-  {
-    src: "images/galerie/vermeille-nathan.jpg",
-    title: { fr: "Nathan — recherche de personnage", en: "Nathan — character research" },
-    category: { fr: "Direction artistique", en: "Art direction" },
-    year: "2026",
-    note: { fr: "Image générée avec Gemini pour fixer l’allure du personnage.", en: "Image generated with Gemini to pin down the character’s look." }
-  },
-  {
-    src: "images/galerie/vermeille-robe.jpg",
-    title: { fr: "La robe vermeille — recherche de costume", en: "The vermilion dress — costume research" },
-    category: { fr: "Direction artistique", en: "Art direction" },
-    year: "2026",
-    note: { fr: "Déclinaison du costume qui donne son titre au film.", en: "Study of the costume that gives the film its title." }
+    src: "images/galerie/halloween.jpg",
+    title: { fr: "[[titre à donner]]", en: "[[title to give]]" },
+    category: { fr: "[[photo ou illustration ?]]", en: "[[photo or illustration?]]" },
+    year: "[[année]]",
+    note: { fr: "[[à décrire : le contexte et ce que tu as fait]]", en: "[[to describe: context and what you did]]" }
   }
+
+  // Pour ajouter un travail : déposer l'image dans images/galerie/, puis copier un bloc ci-dessus.
 ];

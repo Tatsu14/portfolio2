@@ -57,6 +57,13 @@ function renderOtherWorks() {
     </li>`).join("");
 }
 
+function renderGalleryBand() {
+  const band = document.querySelector(".gallery-band");
+  if (!band) return;
+  // Pas d'image dans la galerie : on masque le bandeau plutôt que d'envoyer sur une page vide.
+  band.hidden = !(typeof GALLERY !== "undefined" && GALLERY.length);
+}
+
 function renderCv() {
   const wrap = document.getElementById("cv-download");
   if (!wrap) return;
@@ -88,5 +95,6 @@ onRender(() => {
   renderOtherWorks();
   renderContact();
   renderCv();
+  renderGalleryBand();
   revealOnScroll();
 });

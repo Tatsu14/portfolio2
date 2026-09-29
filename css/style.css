@@ -738,3 +738,5 @@ mark.todo {
   .lightbox__close { top: -6px; right: 4px; }
   .lightbox__img { max-height: 62vh; }
 }
+
+.gallery-band[hidden] { display: none; }

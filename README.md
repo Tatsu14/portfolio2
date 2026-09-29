@@ -36,9 +36,9 @@ cv/                   Le CV en PDF (à déposer)
 
 ## Reste à faire avant les candidatures
 
-- [ ] Capture du site de L’Initiale Vermeille, visuel Chimera, aperçu Prisme Trinity
+- [ ] Capture du site de L’Initiale Vermeille, aperçu Prisme Trinity
 - [ ] Déposer le CV dans `cv/` puis renseigner son nom dans `SITE.cv.url` (js/data.js)
-- [ ] Compléter la galerie : déposer les images dans `images/galerie/` et les ajouter dans `GALLERY` (js/data.js)
+- [ ] Remplir la galerie « Mes autres travaux » : affiches Photoshop, rendus 3D, logos… dans `images/galerie/` puis dans `GALLERY` (js/data.js). Tant qu'elle est vide, le bandeau de l'accueil reste masqué.
 - [ ] Lien Instagram artiste, lien Prisme Trinity
 - [ ] Vérifier que le dépôt GitHub de Proserpine est public
 - [ ] Compléter et valider tous les passages `[[ ]]`
