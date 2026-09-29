@@ -297,6 +297,27 @@ const OTHER_WORKS = [
    -------------------------------------------------------------------------- */
 const GALLERY = [
   {
+    src: "images/galerie/meute-digitale.jpg",
+    title: { fr: "Meute digitale", en: "Digital pack" },
+    category: { fr: "Affiche · Illustrator", en: "Poster · Illustrator" },
+    year: "2025",
+    note: { fr: "Affiche de section réalisée sous Illustrator, en vectoriel.", en: "Course poster made in Illustrator, fully vector." }
+  },
+  {
+    src: "images/galerie/pochette-brel.jpg",
+    title: { fr: "Pochette vinyle — Brel", en: "Vinyl sleeve — Brel" },
+    category: { fr: "Pochette d’album · Photoshop", en: "Album sleeve · Photoshop" },
+    year: "2025",
+    note: { fr: "Détourage, noir et blanc avec touches de couleur, typographie.", en: "Cut-out, black and white with colour accents, typography." }
+  },
+  {
+    src: "images/galerie/foire-viking.jpg",
+    title: { fr: "Foire viking", en: "Viking fair" },
+    category: { fr: "Photomontage · Photoshop", en: "Photo composite · Photoshop" },
+    year: "2025",
+    note: { fr: "Montage d’une attraction foraine dans un décor de forêt brumeuse.", en: "A fairground ride composited into a misty forest." }
+  },
+  {
     src: "images/galerie/scene-rouge.jpg",
     title: { fr: "[[titre à donner]]", en: "[[title to give]]" },
     category: { fr: "Photographie", en: "Photography" },
