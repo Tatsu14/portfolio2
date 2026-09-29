@@ -288,7 +288,7 @@ const OTHER_WORKS = [
       fr: "Compte Instagram qui croise pop culture et droit : ligne éditoriale, recherche et direction visuelle.",
       en: "An Instagram account at the crossroads of pop culture and law: editorial line, research and visual direction."
     },
-    link: null, // [[lien du compte]]
+    link: { label: { fr: "Voir le compte", en: "See the account" }, url: "https://www.instagram.com/prismetrinity/" },
     cover: "images/prisme-trinity.jpg"
   }
 ];
