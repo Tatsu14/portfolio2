@@ -297,6 +297,13 @@ const OTHER_WORKS = [
    -------------------------------------------------------------------------- */
 const GALLERY = [
   {
+    src: "images/galerie/jeu-echecs-3d.jpg",
+    title: { fr: "Jeu d’échecs", en: "Chess set" },
+    category: { fr: "Modélisation 3D", en: "3D modelling" },
+    year: "2020",
+    note: { fr: "Un jeu d’échecs modélisé en 3D, pièces en place pour le début de partie.", en: "A chess set modelled in 3D, pieces set up for the opening." }
+  },
+  {
     src: "images/galerie/pochette-brel.jpg",
     title: { fr: "Pochette de CD — Jacques Brel", en: "CD sleeve — Jacques Brel" },
     category: { fr: "Pochette d’album", en: "Album sleeve" },
