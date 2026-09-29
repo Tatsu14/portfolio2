@@ -297,39 +297,39 @@ const OTHER_WORKS = [
    -------------------------------------------------------------------------- */
 const GALLERY = [
   {
-    src: "images/galerie/meute-digitale.jpg",
-    title: { fr: "Meute digitale", en: "Digital pack" },
-    category: { fr: "Affiche · Illustrator", en: "Poster · Illustrator" },
+    src: "images/galerie/pochette-brel.jpg",
+    title: { fr: "Pochette de CD — Jacques Brel", en: "CD sleeve — Jacques Brel" },
+    category: { fr: "Pochette d’album", en: "Album sleeve" },
     year: "2025",
-    note: { fr: "Affiche de section réalisée sous Illustrator, en vectoriel.", en: "Course poster made in Illustrator, fully vector." }
+    note: { fr: "Pochette de CD fictive pour Jacques Brel.", en: "A fictional CD sleeve for Jacques Brel." }
   },
   {
-    src: "images/galerie/pochette-brel.jpg",
-    title: { fr: "Pochette vinyle — Brel", en: "Vinyl sleeve — Brel" },
-    category: { fr: "Pochette d’album · Photoshop", en: "Album sleeve · Photoshop" },
+    src: "images/galerie/meute-digitale.jpg",
+    title: { fr: "Meute digitale", en: "Digital pack" },
+    category: { fr: "Affiche", en: "Poster" },
     year: "2025",
-    note: { fr: "Détourage, noir et blanc avec touches de couleur, typographie.", en: "Cut-out, black and white with colour accents, typography." }
+    note: { fr: "Affiche représentant la section Écriture multimédia.", en: "A poster for the Multimedia Writing programme." }
+  },
+  {
+    src: "images/galerie/halloween.jpg",
+    title: { fr: "Halloween", en: "Halloween" },
+    category: { fr: "Photographie", en: "Photography" },
+    year: "[[année]]",
+    note: { fr: "Petite photo fun, avec un effet un peu inquiétant.", en: "A small fun photo, with a slightly eerie effect." }
+  },
+  {
+    src: "images/galerie/scene-rouge.jpg",
+    title: { fr: "Sous la lumière rouge", en: "Under the red light" },
+    category: { fr: "Photographie", en: "Photography" },
+    year: "[[année]]",
+    note: { fr: "Photo d’un couple d’amis.", en: "A photo of two friends, a couple." }
   },
   {
     src: "images/galerie/foire-viking.jpg",
     title: { fr: "Foire viking", en: "Viking fair" },
-    category: { fr: "Photomontage · Photoshop", en: "Photo composite · Photoshop" },
+    category: { fr: "Photomontage", en: "Photo composite" },
     year: "2025",
-    note: { fr: "Montage d’une attraction foraine dans un décor de forêt brumeuse.", en: "A fairground ride composited into a misty forest." }
-  },
-  {
-    src: "images/galerie/scene-rouge.jpg",
-    title: { fr: "[[titre à donner]]", en: "[[title to give]]" },
-    category: { fr: "Photographie", en: "Photography" },
-    year: "[[année]]",
-    note: { fr: "[[à décrire : le contexte et ce que tu as fait — lumière, mise en scène, retouche]]", en: "[[to describe: context and what you did — lighting, staging, retouching]]" }
-  },
-  {
-    src: "images/galerie/halloween.jpg",
-    title: { fr: "[[titre à donner]]", en: "[[title to give]]" },
-    category: { fr: "[[photo ou illustration ?]]", en: "[[photo or illustration?]]" },
-    year: "[[année]]",
-    note: { fr: "[[à décrire : le contexte et ce que tu as fait]]", en: "[[to describe: context and what you did]]" }
+    note: { fr: "Manège de foire sur le thème des vikings.", en: "A fairground ride on a Viking theme." }
   }
 
   // Pour ajouter un travail : déposer l'image dans images/galerie/, puis copier un bloc ci-dessus.
