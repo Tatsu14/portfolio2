@@ -187,10 +187,13 @@ const CASE_STUDIES = [
         ]
       },
       {
-        title: { fr: "La suite", en: "What’s next" },
+        title: { fr: "Une décision de produit", en: "A product decision" },
         paragraphs: [{
-          fr: "Transformer cet outil personnel en application proposée à d’autres étudiants. [[déroulé complet à définir ensemble]]",
-          en: "Turn this personal tool into an app offered to other students. [[full case study to define together]]"
+          fr: "Mon idée était d’ouvrir Studyspace à tous les étudiants, avec les quiz et les fiches de révision directement intégrés à l’application. J’y ai renoncé : ce type d’application existe déjà, et j’arriverais sur un marché bondé sans rien apporter de vraiment nouveau.",
+          en: "My idea was to open Studyspace to all students, with quizzes and study cards built straight into the app. I dropped it: apps like this already exist, and I would be entering a crowded market without offering anything genuinely new."
+        }, {
+          fr: "Studyspace reste donc ce pour quoi il a été conçu : mon outil de révision personnel.",
+          en: "So Studyspace stays what it was built to be: my own revision tool."
         }]
       }
     ]
