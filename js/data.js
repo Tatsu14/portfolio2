@@ -289,7 +289,7 @@ const OTHER_WORKS = [
       en: "An Instagram account at the crossroads of pop culture and law: editorial line, research and visual direction."
     },
     link: null, // [[lien du compte]]
-    cover: null
+    cover: "images/prisme-trinity.jpg"
   }
 ];
 
