@@ -318,6 +318,13 @@ const GALLERY = [
     note: { fr: "Petite photo fun, avec un effet un peu inquiétant.", en: "A small fun photo, with a slightly eerie effect." }
   },
   {
+    src: "images/galerie/publications-insta.jpg",
+    title: { fr: "Publications Instagram", en: "Instagram posts" },
+    category: { fr: "Réseaux sociaux", en: "Social media" },
+    year: "2024",
+    note: { fr: "Publications fictives pour un restaurant italien.", en: "Fictional posts for an Italian restaurant." }
+  },
+  {
     src: "images/galerie/scene-rouge.jpg",
     title: { fr: "Sous la lumière rouge", en: "Under the red light" },
     category: { fr: "Photographie", en: "Photography" },
