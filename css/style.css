@@ -668,6 +668,8 @@ mark.todo {
   object-fit: cover;
   background: var(--surface-2);
 }
+/* Affiches et documents : on montre l'image entière, sans rognage */
+.gallery-item__btn--contain img { object-fit: contain; }
 .gallery-item__caption { display: grid; gap: 4px; padding: 16px 18px 18px; }
 .gallery-item__cat {
   color: var(--muted);

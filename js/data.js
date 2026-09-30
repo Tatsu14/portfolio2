@@ -347,6 +347,30 @@ const GALLERY = [
     category: { fr: "Photomontage", en: "Photo composite" },
     year: "2025",
     note: { fr: "Manège de foire sur le thème des vikings.", en: "A fairground ride on a Viking theme." }
+  },
+  {
+    src: "images/galerie/ansport-respect-personnel.jpg",
+    fit: "contain",
+    title: { fr: "Respectons le personnel", en: "Let’s respect the staff" },
+    category: { fr: "Affiche", en: "Poster" },
+    year: "2025",
+    note: { fr: "Affiche invitant les usagers de la piscine à respecter le personnel. Réalisée pendant mon stage chez AnSport.", en: "A poster asking pool users to respect the staff. Made during my internship at AnSport." }
+  },
+  {
+    src: "images/galerie/ansport-horaires.jpg",
+    fit: "contain",
+    title: { fr: "Horaires d’ouverture", en: "Opening hours" },
+    category: { fr: "Affiche", en: "Poster" },
+    year: "2025",
+    note: { fr: "Affiche des horaires d’ouverture de la piscine au public. Réalisée pendant mon stage chez AnSport.", en: "A poster of the pool’s public opening hours. Made during my internship at AnSport." }
+  },
+  {
+    src: "images/galerie/ansport-note-village-sportif.jpg",
+    fit: "contain",
+    title: { fr: "Note de service — Village sportif", en: "Staff notice — Village sportif" },
+    category: { fr: "Communication interne", en: "Internal communication" },
+    year: "2025",
+    note: { fr: "Note rappelant au personnel qu’aucun congé n’est accordé le jour du Village sportif. Réalisée pendant mon stage chez AnSport.", en: "A notice reminding staff that no leave is granted on the day of the Village sportif. Made during my internship at AnSport." }
   }
 
   // Pour ajouter un travail : déposer l'image dans images/galerie/, puis copier un bloc ci-dessus.

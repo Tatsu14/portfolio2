@@ -17,7 +17,7 @@ function renderGallery() {
 
   grid.innerHTML = GALLERY.map((item, i) => `
     <li class="gallery-item reveal">
-      <button type="button" class="gallery-item__btn" data-index="${i}"
+      <button type="button" class="gallery-item__btn${item.fit === "contain" ? " gallery-item__btn--contain" : ""}" data-index="${i}"
               aria-label="${fmt(plain(tr(item.title)))} — ${fmt(UI[LANG].gallery_open)}">
         <img src="${item.src}" alt="${fmt(plain(tr(item.title)))}" loading="lazy">
         <span class="gallery-item__caption">
