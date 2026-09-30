@@ -342,13 +342,6 @@ const GALLERY = [
     note: { fr: "Photo d’un couple d’amis.", en: "A photo of two friends, a couple." }
   },
   {
-    src: "images/galerie/foire-viking.jpg",
-    title: { fr: "Foire viking", en: "Viking fair" },
-    category: { fr: "Photomontage", en: "Photo composite" },
-    year: "2025",
-    note: { fr: "Manège de foire sur le thème des vikings.", en: "A fairground ride on a Viking theme." }
-  },
-  {
     src: "images/galerie/ansport-respect-personnel.jpg",
     fit: "contain",
     title: { fr: "Respectons le personnel", en: "Let’s respect the staff" },
