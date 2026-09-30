@@ -679,6 +679,20 @@ mark.todo {
   text-transform: uppercase;
 }
 .gallery-item__title { font-weight: 600; }
+/* Étiquette d'origine du travail */
+.origin {
+  justify-self: start;
+  margin-top: 6px;
+  padding: 0.2em 0.75em;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.origin--personal { border-color: var(--accent); color: var(--accent-text); }
+.origin--internship { background: var(--surface-2); color: var(--text); }
 .gallery-empty { color: var(--muted); }
 
 /* ---------- 17. Image agrandie ---------- */

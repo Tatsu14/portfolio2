@@ -6,6 +6,12 @@
 
 let currentIndex = -1;
 
+/* Étiquette « Travail étudiant / Projet perso / Stage » */
+function originBadge(item) {
+  if (!item.origin || !UI[LANG]["origin_" + item.origin]) return "";
+  return `<span class="origin origin--${item.origin}">${fmt(t("origin_" + item.origin))}</span>`;
+}
+
 function renderGallery() {
   const grid = document.getElementById("gallery-grid");
   if (!grid) return;
@@ -23,6 +29,7 @@ function renderGallery() {
         <span class="gallery-item__caption">
           <span class="gallery-item__cat">${fmt(tr(item.category))} · ${fmt(tr(item.year))}</span>
           <span class="gallery-item__title">${fmt(tr(item.title))}</span>
+          ${originBadge(item)}
         </span>
       </button>
     </li>`).join("");
@@ -43,7 +50,8 @@ function openLightbox(index) {
   box.querySelector(".lightbox__img").alt = plain(tr(item.title));
   box.querySelector(".lightbox__title").innerHTML = fmt(tr(item.title));
   box.querySelector(".lightbox__meta").innerHTML =
-    `${fmt(tr(item.category))} · ${fmt(tr(item.year))}`;
+    `${fmt(tr(item.category))} · ${fmt(tr(item.year))}` +
+    (item.origin && UI[LANG]["origin_" + item.origin] ? ` · ${fmt(t("origin_" + item.origin))}` : "");
   box.querySelector(".lightbox__note").innerHTML = item.note ? fmt(tr(item.note)) : "";
 
   box.hidden = false;

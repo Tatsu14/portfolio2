@@ -50,6 +50,9 @@ const UI = {
     gallery_title: "Mes autres travaux",
     gallery_lead: "Affiches, recherches visuelles et images réalisées en marge de mes projets. Cliquez sur une image pour l’agrandir.",
     gallery_open: "agrandir",
+    origin_student: "Travail étudiant",
+    origin_personal: "Projet perso",
+    origin_internship: "Stage AnSport",
     gallery_empty: "[[Aucune image pour l’instant : déposez vos fichiers dans images/galerie puis ajoutez-les dans js/data.js]]",
 
     about_title: "À propos",
@@ -113,6 +116,9 @@ const UI = {
     gallery_title: "My other work",
     gallery_lead: "Posters, visual research and images made alongside my projects. Click an image to enlarge it.",
     gallery_open: "enlarge",
+    origin_student: "Student work",
+    origin_personal: "Personal project",
+    origin_internship: "AnSport internship",
     gallery_empty: "[[No image yet: drop your files into images/galerie, then add them in js/data.js]]",
 
     about_title: "About",

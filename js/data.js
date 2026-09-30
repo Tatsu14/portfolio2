@@ -297,10 +297,12 @@ const OTHER_WORKS = [
 /* --------------------------------------------------------------------------
    GALERIE « MES AUTRES TRAVAUX » (page galerie.html)
    Déposer les images dans images/galerie/, puis ajouter une entrée ici.
+   origin : "student" (travail étudiant), "personal" (projet perso) ou "internship" (stage AnSport).
    -------------------------------------------------------------------------- */
 const GALLERY = [
   {
     src: "images/galerie/jeu-echecs-3d.jpg",
+    origin: "student",
     title: { fr: "Jeu d’échecs", en: "Chess set" },
     category: { fr: "Modélisation 3D", en: "3D modelling" },
     year: "2020",
@@ -308,6 +310,7 @@ const GALLERY = [
   },
   {
     src: "images/galerie/pochette-brel.jpg",
+    origin: "student",
     title: { fr: "Pochette de CD — Jacques Brel", en: "CD sleeve — Jacques Brel" },
     category: { fr: "Pochette d’album", en: "Album sleeve" },
     year: "2025",
@@ -315,6 +318,7 @@ const GALLERY = [
   },
   {
     src: "images/galerie/halloween.jpg",
+    origin: "personal",
     title: { fr: "Halloween", en: "Halloween" },
     category: { fr: "Photographie", en: "Photography" },
     year: "2025",
@@ -322,6 +326,7 @@ const GALLERY = [
   },
   {
     src: "images/galerie/publications-insta.jpg",
+    origin: "student",
     title: { fr: "Publications Instagram", en: "Instagram posts" },
     category: { fr: "Réseaux sociaux", en: "Social media" },
     year: "2024",
@@ -329,6 +334,7 @@ const GALLERY = [
   },
   {
     src: "images/galerie/scene-rouge.jpg",
+    origin: "personal",
     title: { fr: "Sous la lumière rouge", en: "Under the red light" },
     category: { fr: "Photographie", en: "Photography" },
     year: "2025",
@@ -336,11 +342,12 @@ const GALLERY = [
   },
   {
     src: "images/galerie/ansport-respect-personnel.jpg",
+    origin: "internship",
     fit: "contain",
     title: { fr: "Respectons le personnel", en: "Let’s respect the staff" },
     category: { fr: "Affiche", en: "Poster" },
     year: "2025",
-    note: { fr: "Affiche invitant les usagers de la piscine à respecter le personnel. Réalisée pendant mon stage chez AnSport.", en: "A poster asking pool users to respect the staff. Made during my internship at AnSport." }
+    note: { fr: "Affiche invitant les usagers de la piscine à respecter le personnel.", en: "A poster asking pool users to respect the staff." }
   }
 
   // Pour ajouter un travail : déposer l'image dans images/galerie/, puis copier un bloc ci-dessus.
