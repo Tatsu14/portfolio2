@@ -18,9 +18,9 @@ const UI = {
     theme_to_dark: "Passer en mode sombre",
     draft_banner: "Version de travail : les passages surlignés sont à compléter ou à valider.",
 
-    hero_eyebrow: "Product design · Étudiant en 2e année à la HEPL (Liège)",
+    hero_eyebrow: "Product design · Étudiant-entrepreneur en 2e année à la HEPL (Liège)",
     hero_title: "Je conçois des produits utiles, avec l’IA comme outil de travail.",
-    hero_lead: "Je pars d’un vrai problème, je vérifie qu’il existe, puis je conçois et je développe l’application. L’IA m’accompagne à chaque étape ; les décisions restent les miennes.",
+    hero_lead: "Je pars d’un vrai problème, je vérifie qu’il existe, puis je conçois et je développe le produit qui le résout. L’IA m’accompagne à chaque étape mais les décisions restent les miennes.",
     hero_cta_cases: "Voir les études de cas",
     hero_cta_contact: "Me contacter",
 
@@ -38,7 +38,7 @@ const UI = {
     method_3_t: "Concevoir et prototyper avec l’IA",
     method_3_p: "Claude, Gemini et Antigravity m’aident à structurer, explorer des pistes, créer des visuels et écrire du code.",
     method_4_t: "Garder la main sur les décisions",
-    method_4_p: "L’IA propose, je tranche : le problème, la cible, le ton et ce qui entre dans la V1 restent mes choix.",
+    method_4_p: "L’IA propose, je tranche : le problème, la cible, le ton et ce qui entre dans le produit final restent mes choix.",
 
     other_title: "Autres créations",
     other_intro: "Écriture, image, médias : ce qui nourrit ma façon de concevoir.",
@@ -56,7 +56,7 @@ const UI = {
     gallery_empty: "[[Aucune image pour l’instant : déposez vos fichiers dans images/galerie puis ajoutez-les dans js/data.js]]",
 
     about_title: "À propos",
-    about_text: "Étudiant en 2e année à la HEPL, je touche à tout ce qui fait un produit : l’écriture, l’image, la vidéo et le code. Je prépare Adhara, mon studio de product design.",
+    about_text: "Étudiant en 2e année à la HEPL, je touche à tout ce qui fait un produit : l’écriture, l’image, la vidéo et le code. Je prépare Adhara, un studio de product design avec un ami graphic designer.",
     contact_title: "Écrivons la suite.",
     contact_lead: "Le plus simple pour me joindre : un e-mail.",
 
@@ -84,9 +84,9 @@ const UI = {
     theme_to_dark: "Switch to dark mode",
     draft_banner: "Work in progress: highlighted passages still need to be completed or approved.",
 
-    hero_eyebrow: "Product design · 2nd-year student at HEPL (Liège, Belgium)",
+    hero_eyebrow: "Product design · 2nd-year student entrepreneur at HEPL (Liège, Belgium)",
     hero_title: "I design useful products, with AI as my working tool.",
-    hero_lead: "I start from a real problem, check that it exists, then design and build the app. AI supports me at every step; the decisions stay mine.",
+    hero_lead: "I start from a real problem, check that it exists, then design and build the product that solves it. AI supports me at every step, but the decisions stay mine.",
     hero_cta_cases: "See the case studies",
     hero_cta_contact: "Get in touch",
 
@@ -104,7 +104,7 @@ const UI = {
     method_3_t: "Design and prototype with AI",
     method_3_p: "Claude, Gemini and Antigravity help me structure ideas, explore options, create visuals and write code.",
     method_4_t: "Keep ownership of decisions",
-    method_4_p: "AI suggests, I decide: the problem, the audience, the tone and what goes into V1 remain my choices.",
+    method_4_p: "AI suggests, I decide: the problem, the audience, the tone and what goes into the final product remain my choices.",
 
     other_title: "Other work",
     other_intro: "Writing, images, media: what feeds the way I design.",
@@ -122,7 +122,7 @@ const UI = {
     gallery_empty: "[[No image yet: drop your files into images/galerie, then add them in js/data.js]]",
 
     about_title: "About",
-    about_text: "A 2nd-year student at HEPL, I work across everything that makes a product: writing, images, video and code. I’m building Adhara, my product design studio.",
+    about_text: "A 2nd-year student at HEPL, I work across everything that makes a product: writing, images, video and code. I’m building Adhara, a product design studio, with a friend who is a graphic designer.",
     contact_title: "Let’s write what comes next.",
     contact_lead: "The easiest way to reach me: an email.",
 
