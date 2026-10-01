@@ -285,10 +285,10 @@ const OTHER_WORKS = [
     category: { fr: "Média · Instagram", en: "Media · Instagram" },
     year: { fr: "En cours", en: "Ongoing" },
     text: {
-      fr: "Compte Instagram qui croise pop culture et droit : ligne éditoriale, recherche et direction visuelle.",
-      en: "An Instagram account at the crossroads of pop culture and law: editorial line, research and visual direction."
+      fr: "Média Instagram qui dissèque les récits de fiction pour révéler les failles de notre monde réel, sous trois angles : philosophie, sociologie, éthique.",
+      en: "An Instagram media account that dissects fictional stories to reveal the flaws of our real world, through three lenses: philosophy, sociology, ethics."
     },
-    link: { label: { fr: "Voir le compte", en: "See the account" }, url: "https://www.instagram.com/prismetrinity/" },
+    link: { label: { fr: "Voir le compte", en: "See the account" }, url: "https://www.instagram.com/prisme.trinity/" },
     cover: "images/prisme-trinity.jpg"
   }
 ];
