@@ -10,7 +10,7 @@
 const SITE = {
   // Passe à false quand tous les [[ ]] ont disparu : le bandeau
   // « Version de travail » disparaît alors.
-  draft: true,
+  draft: false,
   name: "Maxime Cavallari",
   email: "maximecav4@gmail.com",
   links: [
