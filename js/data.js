@@ -40,18 +40,17 @@ const CASE_STUDIES = [
     },
     kind: { fr: "Application mobile (Android native et PWA)", en: "Mobile app (native Android and PWA)" },
     year: "2026",
-    status: { fr: "Test fermé sur Google Play", en: "Closed testing on Google Play" },
+    status: { fr: "Test fermé en préparation", en: "Closed testing in preparation" },
     meta: [
       { label: { fr: "Rôle", en: "Role" },
         value: { fr: "Recherche, conception et développement, seul", en: "Research, design and development, solo" } },
       { label: { fr: "Cadre", en: "Scope" },
         value: { fr: "Projet dans le cadre d'un cours de Design Thinking · moins de 2 mois · budget 0 € (utilisation d'outils gratuits)", en: "School project from Design Thinking course · under 2 months · €0 budget (use of free tools)" } },
       { label: { fr: "Technique", en: "Stack" },
-        value: { fr: "Vite · JavaScript · PWA", en: "Vite · JavaScript · PWA" } }
+        value: { fr: "Expo (React Native) · TypeScript · Firebase · V1 web : HTML, CSS, JavaScript", en: "Expo (React Native) · TypeScript · Firebase · Web V1: HTML, CSS, JavaScript" } }
     ],
     links: [
-      { label: { fr: "Ouvrir l’app", en: "Open the app" }, url: "https://proserpine-design.vercel.app" },
-      { label: { fr: "Code source", en: "Source code" }, url: "https://github.com/Tatsu14/proserpine" }
+      { label: { fr: "Ouvrir l’app", en: "Open the app" }, url: "https://proserpine.vercel.app" }
     ],
     cover: "images/proserpine-couverture.jpg",
     sections: [
@@ -92,38 +91,44 @@ const CASE_STUDIES = [
             text: { fr: "Pas de « éco » dans le nom, pas de culpabilisation : un ton direct, ludique et encourageant.", en: "No “eco” in the name, no guilt-tripping: a direct, playful, encouraging tone." } },
           { title: { fr: "Un créneau libre", en: "An open niche" },
             text: { fr: "Yuka parle santé, Greenly parle carbone : Proserpine se concentre sur la fin de vie de l’emballage.", en: "Yuka covers health, Greenly covers carbon: Proserpine focuses on the packaging’s end of life." } },
-          { title: { fr: "Installable sans store", en: "Installable, no store" },
-            text: { fr: "Une application web installable sur téléphone (PWA) : le web est ce que je maîtrise le mieux, et c’était le seul format tenable en moins de deux mois. La version native Android a suivi.", en: "A web app you can install on your phone (PWA): the web is what I know best, and it was the only format that fit in under two months. The native Android version followed." } }
+          { title: { fr: "Du web au natif", en: "From web to native" },
+            text: { fr: "Je suis parti d’une PWA pour sa facilité d’exécution et son accessibilité. Après quelques mois d’amélioration, j’ai migré vers une version native : d’abord par fichier .apk, puis par une publication sur le Play Store (test fermé en préparation).", en: "I started with a PWA for ease of execution and accessibility. After a few months of improvements, I migrated to a native version: first through an .apk file, then through a Play Store release (closed testing being prepared)." } }
         ]
       },
       {
         title: { fr: "L’IA dans le projet", en: "AI in the project" },
         paragraphs: [{
-          fr: "Proserpine est le projet où l’IA est le moins intervenue : elle a écrit le code que je lui demandais, rien de plus. Les idées viennent de moi, ou d’exemples repérés en ligne. Sur mes autres applications, elle intervient aussi en amont, dans la conception.",
-          en: "Proserpine is the project where AI played the smallest part: it wrote the code I asked for, nothing else. The ideas are mine, or come from examples I found online. On my other apps, it also takes part earlier, in the design work."
+          fr: "Tout le code de Proserpine est écrit par l’IA (Claude, Claude Code), à partir de mes instructions. Le reste est à moi : le problème, la cible, le ton, les fonctionnalités et chaque choix d’interface, que je valide un par un. L’IA m’a aussi aidé à construire l’indice d’impact à partir des données d’Open Food Facts et à analyser les retours des testeurs.",
+          en: "All of Proserpine’s code is written by AI (Claude, Claude Code), from my instructions. The rest is mine: the problem, the audience, the tone, the features and every interface choice, which I validate one by one. AI also helped me build the impact index from Open Food Facts data and analyse testers’ feedback."
+        }, {
+          fr: "L’algorithme et les règles de tri, eux, relèvent surtout de mon travail : je scanne les produits un à un, je vérifie la consigne affichée, puis je corrige les règles pour les améliorer. Dans l’application, le tri repose sur ces règles, sans IA.",
+          en: "The sorting algorithm and rules are mostly my own work: I scan products one by one, check the instruction shown, then fix the rules to improve them. In the app, sorting relies on these rules, with no AI."
         }],
         ai: {
           did: [
-            { fr: "Écrire le code de la V1, à partir de mes instructions", en: "Write the code of the V1, from my instructions" }
+            { fr: "Écrire tout le code, à partir de mes instructions", en: "Write all the code, from my instructions" },
+            { fr: "Construire l’indice d’impact avec moi, à partir d’Open Food Facts", en: "Build the impact index with me, from Open Food Facts data" },
+            { fr: "Analyser les retours des testeurs", en: "Analyse testers’ feedback" }
           ],
           decided: [
             { fr: "Le problème, la cible et le ton", en: "The problem, the audience and the tone" },
             { fr: "Les hypothèses à vérifier et les questions d’entretien", en: "The hypotheses to test and the interview questions" },
-            { fr: "Les fonctionnalités et les partis pris de conception", en: "The features and the design choices" }
+            { fr: "Les fonctionnalités et les partis pris de conception", en: "The features and the design choices" },
+            { fr: "Les règles de tri, vérifiées produit par produit", en: "The sorting rules, checked product by product" }
           ]
         }
       },
       {
         title: { fr: "Résultat", en: "Outcome" },
         paragraphs: [{
-          fr: "Une V1 fonctionnelle, installable sur téléphone. Chaque produit scanné reçoit un score sur 100 et des consignes de tri par matériau (sac bleu PMC, papiers et cartons), avec un guide et l’historique des produits scannés.",
-          en: "A working V1 you can install on your phone. Every scanned product gets a score out of 100 and sorting instructions per material (blue PMC bag, paper and cardboard), plus a guide and a history of scanned products."
+          fr: "Une application Android native, qui reprend la logique de la V1 web : on scanne un code-barres ou on cherche le produit, et la fiche indique dans quel bac le jeter, avec un conseil de tri et un indice d’impact sur 100. Un guide de tri, l’historique des produits scannés et des réglages complètent l’ensemble.",
+          en: "A native Android app that carries over the web V1’s logic: you scan a barcode or search for the product, and the page shows which bin it goes in, with a sorting tip and an impact index out of 100. A sorting guide, the history of scanned products and settings complete the app."
         }, {
-          fr: "L’interface et l’algorithme de score sont encore imparfaits : c’est une première version assumée, à améliorer.",
-          en: "The interface and the scoring algorithm are still rough: a deliberate first version, to be improved."
+          fr: "Le tri s’améliore produit après produit ; l’indice d’impact est encore en cours d’amélioration, et les consignes de tri passent en priorité.",
+          en: "Sorting improves product after product; the impact index is still being improved, and sorting instructions come first."
         }, {
-          fr: "Proserpine est désormais aussi une application native Android, en test fermé sur Google Play. L’objectif : la passer en production pour la rendre disponible au public sur le Play Store.",
-          en: "Proserpine is now also a native Android app, in closed testing on Google Play. The goal: move it to production to make it available to the public on the Play Store."
+          fr: "Le test fermé sur Google Play est en préparation ; l’objectif est ensuite de passer l’application en production pour la rendre disponible au public sur le Play Store.",
+          en: "Closed testing on Google Play is being prepared; the goal is then to move the app to production and make it available to the public on the Play Store."
         }],
         shots: [
           { src: "images/proserpine-accueil.jpg",
@@ -135,11 +140,13 @@ const CASE_STUDIES = [
       {
         title: { fr: "La suite", en: "What’s next" },
         list: [
-          { fr: "Une saisie manuelle quand le code-barres n’est pas reconnu", en: "Manual entry when the barcode isn’t recognised" },
-          { fr: "Un guide de tri consultable à tout moment", en: "A sorting guide available at any time" },
-          { fr: "Rendre l’algorithme d’éco-score vraiment intelligent : déduire les informations qui manquent dans les bases publiques plutôt que de s’arrêter à ce qui y est écrit", en: "Make the eco-score algorithm genuinely smart: infer the information missing from public databases instead of stopping at what they state" },
-          { fr: "Constituer mes propres bases de données de produits", en: "Build my own product databases" },
-          { fr: "Passer du test fermé à la production, pour rendre l’application disponible au public sur le Play Store", en: "Move from closed testing to production, to make the app available to the public on the Play Store" }
+          { fr: "Lancer le test fermé sur Google Play, puis passer en production pour rendre l’application disponible au public", en: "Launch closed testing on Google Play, then move to production to make the app available to the public" },
+          { fr: "Améliorer l’algorithme de tri en priorité, puis fiabiliser l’indice d’impact", en: "Improve the sorting algorithm first, then make the impact index reliable" },
+          { fr: "Constituer ma propre base de données de produits, avec le détail du tri, pour ne plus dépendre d’Open Food Facts", en: "Build my own product database, with sorting details, to stop depending on Open Food Facts" },
+          { fr: "Synchroniser l’application avec les règles de tri publiées par chaque commune", en: "Sync the app with the sorting rules published by each municipality" },
+          { fr: "Reconnaître les pictogrammes de danger sur les produits", en: "Recognise hazard pictograms on products" },
+          { fr: "Améliorer le tri des cosmétiques et des produits non alimentaires", en: "Improve sorting for cosmetics and non-food products" },
+          { fr: "Proposer une offre premium", en: "Offer a premium plan" }
         ]
       }
     ]
