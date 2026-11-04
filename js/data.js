@@ -38,9 +38,9 @@ const CASE_STUDIES = [
       fr: "Savoir dans quelle poubelle jeter un emballage, en un seul scan.",
       en: "Know which bin a package goes in, with a single scan."
     },
-    kind: { fr: "Application mobile (PWA)", en: "Mobile app (PWA)" },
+    kind: { fr: "Application mobile (Android native et PWA)", en: "Mobile app (native Android and PWA)" },
     year: "2026",
-    status: { fr: "V1 en ligne", en: "V1 live" },
+    status: { fr: "Test fermé sur Google Play", en: "Closed testing on Google Play" },
     meta: [
       { label: { fr: "Rôle", en: "Role" },
         value: { fr: "Recherche, conception et développement, seul", en: "Research, design and development, solo" } },
@@ -93,7 +93,7 @@ const CASE_STUDIES = [
           { title: { fr: "Un créneau libre", en: "An open niche" },
             text: { fr: "Yuka parle santé, Greenly parle carbone : Proserpine se concentre sur la fin de vie de l’emballage.", en: "Yuka covers health, Greenly covers carbon: Proserpine focuses on the packaging’s end of life." } },
           { title: { fr: "Installable sans store", en: "Installable, no store" },
-            text: { fr: "Une application web installable sur téléphone (PWA) : le web est ce que je maîtrise le mieux, et c’était le seul format tenable en moins de deux mois. Une version native viendra plus tard.", en: "A web app you can install on your phone (PWA): the web is what I know best, and it was the only format that fit in under two months. A native version will come later." } }
+            text: { fr: "Une application web installable sur téléphone (PWA) : le web est ce que je maîtrise le mieux, et c’était le seul format tenable en moins de deux mois. La version native Android a suivi.", en: "A web app you can install on your phone (PWA): the web is what I know best, and it was the only format that fit in under two months. The native Android version followed." } }
         ]
       },
       {
@@ -121,12 +121,15 @@ const CASE_STUDIES = [
         }, {
           fr: "L’interface et l’algorithme de score sont encore imparfaits : c’est une première version assumée, à améliorer.",
           en: "The interface and the scoring algorithm are still rough: a deliberate first version, to be improved."
+        }, {
+          fr: "Proserpine est désormais aussi une application native Android, en test fermé sur Google Play. L’objectif : la passer en production pour la rendre disponible au public sur le Play Store.",
+          en: "Proserpine is now also a native Android app, in closed testing on Google Play. The goal: move it to production to make it available to the public on the Play Store."
         }],
         shots: [
           { src: "images/proserpine-accueil.jpg",
             caption: { fr: "Accueil : produits les plus scannés et meilleurs scores", en: "Home: most-scanned products and best scores" } },
-          { src: "images/proserpine-resultat.jpg",
-            caption: { fr: "Après un scan : score, analyse et consignes de tri", en: "After a scan: score, analysis and sorting instructions" } }
+          { src: "images/proserpine-fiche-produit.jpg",
+            caption: { fr: "Fiche produit : consigne de tri, conseil et indice d’impact", en: "Product page: sorting instruction, tip and impact index" } }
         ]
       },
       {
@@ -136,7 +139,7 @@ const CASE_STUDIES = [
           { fr: "Un guide de tri consultable à tout moment", en: "A sorting guide available at any time" },
           { fr: "Rendre l’algorithme d’éco-score vraiment intelligent : déduire les informations qui manquent dans les bases publiques plutôt que de s’arrêter à ce qui y est écrit", en: "Make the eco-score algorithm genuinely smart: infer the information missing from public databases instead of stopping at what they state" },
           { fr: "Constituer mes propres bases de données de produits", en: "Build my own product databases" },
-          { fr: "Une version native, une fois la V1 web stabilisée", en: "A native version, once the web V1 is stable" }
+          { fr: "Passer du test fermé à la production, pour rendre l’application disponible au public sur le Play Store", en: "Move from closed testing to production, to make the app available to the public on the Play Store" }
         ]
       }
     ]
