@@ -551,7 +551,7 @@ mark.todo {
 .decision-list h3 { font-size: 1.05rem; margin-bottom: 6px; }
 .decision-list p { color: var(--muted); font-size: 0.975rem; }
 
-.ai-split { display: grid; gap: 14px; }
+.ai-split { display: grid; gap: 14px; margin-top: 32px; }
 @media (min-width: 640px) { .ai-split { grid-template-columns: 1fr 1fr; } }
 .ai-split__col {
   padding: 22px;

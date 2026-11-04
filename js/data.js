@@ -92,7 +92,7 @@ const CASE_STUDIES = [
           { title: { fr: "Un créneau libre", en: "An open niche" },
             text: { fr: "Yuka parle santé, Greenly parle carbone : Proserpine se concentre sur la fin de vie de l’emballage.", en: "Yuka covers health, Greenly covers carbon: Proserpine focuses on the packaging’s end of life." } },
           { title: { fr: "Du web au natif", en: "From web to native" },
-            text: { fr: "Je suis parti d’une PWA pour sa facilité d’exécution et son accessibilité. Après quelques mois d’amélioration, j’ai migré vers une version native : d’abord par fichier .apk, puis par une publication sur le Play Store (test fermé en préparation).", en: "I started with a PWA for ease of execution and accessibility. After a few months of improvements, I migrated to a native version: first through an .apk file, then through a Play Store release (closed testing being prepared)." } }
+            text: { fr: "PWA au départ (facile, accessible) ; après quelques mois, version native : .apk, puis Play Store.", en: "A PWA at first, for ease and accessibility; after a few months, a move to native: .apk first, then the Play Store." } }
         ]
       },
       {
@@ -124,8 +124,8 @@ const CASE_STUDIES = [
           fr: "Une application Android native, qui reprend la logique de la V1 web : on scanne un code-barres ou on cherche le produit, et la fiche indique dans quel bac le jeter, avec un conseil de tri et un indice d’impact sur 100. Un guide de tri, l’historique des produits scannés et des réglages complètent l’ensemble.",
           en: "A native Android app that carries over the web V1’s logic: you scan a barcode or search for the product, and the page shows which bin it goes in, with a sorting tip and an impact index out of 100. A sorting guide, the history of scanned products and settings complete the app."
         }, {
-          fr: "Le tri s’améliore produit après produit ; l’indice d’impact est encore en cours d’amélioration, et les consignes de tri passent en priorité.",
-          en: "Sorting improves product after product; the impact index is still being improved, and sorting instructions come first."
+          fr: "L’algorithme de tri est en cours d’amélioration : c’est ma priorité numéro 1.",
+          en: "The sorting algorithm is being improved: it’s my number one priority."
         }, {
           fr: "Le test fermé sur Google Play est en préparation ; l’objectif est ensuite de passer l’application en production pour la rendre disponible au public sur le Play Store.",
           en: "Closed testing on Google Play is being prepared; the goal is then to move the app to production and make it available to the public on the Play Store."
@@ -146,7 +146,8 @@ const CASE_STUDIES = [
           { fr: "Synchroniser l’application avec les règles de tri publiées par chaque commune", en: "Sync the app with the sorting rules published by each municipality" },
           { fr: "Reconnaître les pictogrammes de danger sur les produits", en: "Recognise hazard pictograms on products" },
           { fr: "Améliorer le tri des cosmétiques et des produits non alimentaires", en: "Improve sorting for cosmetics and non-food products" },
-          { fr: "Proposer une offre premium", en: "Offer a premium plan" }
+          { fr: "Proposer une offre premium", en: "Offer a premium plan" },
+          { fr: "Améliorer constamment l’application en prenant en compte l’avis de mes utilisateurs", en: "Keep improving the app constantly, taking my users’ feedback into account" }
         ]
       }
     ]
